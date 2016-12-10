@@ -67,6 +67,7 @@
     <object>objects\obj_gamemanager</object>
     <objects name="textbox">
       <object>objects\oDialogue</object>
+      <object>objects\oDialogue_2</object>
       <object>objects\oControl</object>
       <object>objects\oGreen</object>
       <object>objects\oPink</object>
