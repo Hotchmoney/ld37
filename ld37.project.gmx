@@ -91,6 +91,7 @@
     <rooms name="CarterGame">
       <room>rooms\rm_Main</room>
     </rooms>
+    <room>rooms\chat_highscore</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
