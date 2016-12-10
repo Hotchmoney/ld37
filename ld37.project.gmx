@@ -9,8 +9,6 @@
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sp_player_jumper</sprite>
-    <sprite>sprites\sp_platform_jumper</sprite>
     <sprites name="asteroids">
       <sprite>sprites\sp_bullet_asteroid</sprite>
       <sprite>sprites\sp_asteroids_asteroid</sprite>
@@ -27,6 +25,10 @@
       <sprite>sprites\sBlue</sprite>
       <sprite>sprites\sGreen</sprite>
       <sprite>sprites\sPink</sprite>
+    </sprites>
+    <sprites name="jumper">
+      <sprite>sprites\sp_player_jumper</sprite>
+      <sprite>sprites\sp_platform_jumper</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -55,8 +57,6 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_gamemanager</object>
-    <object>objects\obj_player_jumper</object>
-    <object>objects\obj_platform_jumper</object>
     <objects name="asteroids">
       <object>objects\obj_bullet_asteroid</object>
       <object>objects\obj_player_asteroid</object>
@@ -73,6 +73,10 @@
       <object>objects\oGreen</object>
       <object>objects\oPink</object>
       <object>objects\oBlue</object>
+    </objects>
+    <objects name="jumper">
+      <object>objects\obj_platform_jumper</object>
+      <object>objects\obj_player_jumper</object>
     </objects>
   </objects>
   <rooms name="rooms">
