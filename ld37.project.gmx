@@ -3,6 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles"/>
   <NewExtensions>
     <extension index="0">extensions\Smooth Dialogue Engine</extension>
   </NewExtensions>
@@ -53,6 +54,7 @@
     </fonts>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_gamemanager</object>
     <object>objects\obj_player_jumper</object>
     <object>objects\obj_platform_jumper</object>
     <objects name="asteroids">
@@ -64,9 +66,9 @@
     <objects name="CarterGame">
       <object>objects\obj_Player</object>
     </objects>
-    <object>objects\obj_gamemanager</object>
     <objects name="textbox">
       <object>objects\oDialogue</object>
+      <object>objects\oDialogue_2</object>
       <object>objects\oControl</object>
       <object>objects\oGreen</object>
       <object>objects\oPink</object>
