@@ -133,7 +133,7 @@ if (keyboard_check_pressed(key)) {
     }
 }
 
-if (text==string_length(msg[cur])
+if (text==string_length(msg[cur]))
 {
     time += delta_time/1000000;
 }
