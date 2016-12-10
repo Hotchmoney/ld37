@@ -9,6 +9,8 @@
     <sprite>sprites\sp_player_asteroid</sprite>
     <sprite>sprites\sp_bullet_asteroid</sprite>
     <sprite>sprites\sp_asteroids_asteroid</sprite>
+    <sprite>sprites\sp_player_jumper</sprite>
+    <sprite>sprites\sp_platform_jumper</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -19,9 +21,12 @@
     <object>objects\obj_bullet_asteroid</object>
     <object>objects\obj_asteroids_asteroid</object>
     <object>objects\obj_asteroid_manager</object>
+    <object>objects\obj_player_jumper</object>
+    <object>objects\obj_platform_jumper</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_asteroids</room>
+    <room>rooms\rm_jumper</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
