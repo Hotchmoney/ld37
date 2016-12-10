@@ -31,7 +31,6 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\Move.gml</script>
-    <script>scripts\scr_text.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt</font>
@@ -49,7 +48,6 @@
       <object>objects\obj_Player</object>
     </objects>
     <object>objects\obj_gamemanager</object>
-    <object>objects\obj_text</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
