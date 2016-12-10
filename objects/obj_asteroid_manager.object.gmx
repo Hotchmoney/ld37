@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>gamestate = 0;
-level = 0;
+level = level = obj_gamemanager.cur_asteroid_level;
 asteroid_counter = 0;
 asteroid_time = 0;
 instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_player_asteroid);
@@ -61,7 +61,7 @@ instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_playe
  if (asteroid_time ==0)
  {
     var i;
-    for (i=0; i &lt; ((2*level)+8); i +=1)
+    for (i=0; i &lt; ((4*level)+8); i +=1)
     {
         instance_create(view_xview-view_wview*random(1), view_yview-view_hview*random(1), obj_asteroids_asteroid);
         instance_create(view_xview+view_wview*(1+random(1)), view_yview+view_hview*(1+random(1)), obj_asteroids_asteroid);
@@ -73,12 +73,14 @@ instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_playe
  
 }else if (gamestate==1){
 //win
-
+    obj_gamemanager.cur_asteroid_level +=1;
+    room_restart();
 
 }else{
 //lose
-
-
+    obj_gamemanager.score_asteroids = level;
+    obj_gamemanager.cur_asteroid_level=0;
+    room_restart();
 }
 
 if (asteroid_counter==0){
