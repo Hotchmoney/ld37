@@ -5,9 +5,35 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprites name="CarterGame">
+      <sprite>sprites\spr_Player_Down</sprite>
+      <sprite>sprites\spr_Player_Right</sprite>
+      <sprite>sprites\spr_Player_Up</sprite>
+      <sprite>sprites\spr_Player_Left</sprite>
+    </sprites>
+  </sprites>
+  <backgrounds name="background">
+    <backgrounds name="CarterGame">
+      <background>background\ice</background>
+      <background>background\Grass</background>
+      <background>background\Rock</background>
+    </backgrounds>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\Move.gml</script>
+  </scripts>
+  <objects name="objects">
+    <objects name="CarterGame">
+      <object>objects\obj_Player</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <rooms name="CarterGame">
+      <room>rooms\rm_Main</room>
+    </rooms>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
