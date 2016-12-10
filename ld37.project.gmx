@@ -5,9 +5,24 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\sp_player_asteroid</sprite>
+    <sprite>sprites\sp_bullet_asteroid</sprite>
+    <sprite>sprites\sp_asteroids_asteroid</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\obj_player_asteroid</object>
+    <object>objects\obj_bullet_asteroid</object>
+    <object>objects\obj_asteroids_asteroid</object>
+    <object>objects\obj_asteroid_manager</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_asteroids</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
