@@ -20,6 +20,6 @@
   <width>32</width>
   <height>32</height>
   <frames>
-    <frame index="0">images\sp_player_asteroid_0.png</frame>
+    <frame index="0">images\sp_player_jumper_0.png</frame>
   </frames>
 </sprite>

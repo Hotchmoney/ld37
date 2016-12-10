@@ -6,26 +6,47 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\sp_player_jumper</sprite>
+    <sprite>sprites\sp_platform_jumper</sprite>
     <sprites name="asteroids">
       <sprite>sprites\sp_bullet_asteroid</sprite>
       <sprite>sprites\sp_asteroids_asteroid</sprite>
       <sprite>sprites\sp_player_asteroid</sprite>
     </sprites>
+    <sprites name="CarterGame">
+      <sprite>sprites\spr_Player_Down</sprite>
+      <sprite>sprites\spr_Player_Right</sprite>
+      <sprite>sprites\spr_Player_Up</sprite>
+      <sprite>sprites\spr_Player_Left</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+    <backgrounds name="background">
+    <background>background\background0</background>
+    <backgrounds name="CarterGame">
+      <background>background\ice</background>
+      <background>background\Grass</background>
+      <background>background\Rock</background>
+    </backgrounds>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\Move.gml</script>
     <script>scripts\scr_text.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_player_jumper</object>
+    <object>objects\obj_platform_jumper</object>
     <objects name="asteroids">
       <object>objects\obj_bullet_asteroid</object>
       <object>objects\obj_player_asteroid</object>
       <object>objects\obj_asteroid_manager</object>
       <object>objects\obj_asteroids_asteroid</object>
+    </objects>
+    <objects name="CarterGame">
+      <object>objects\obj_Player</object>
     </objects>
     <object>objects\obj_gamemanager</object>
     <object>objects\obj_text</object>
@@ -35,6 +56,9 @@
     <room>rooms\main_room</room>
     <rooms name="asteroids">
       <room>rooms\rm_asteroids</room>
+    </rooms>
+    <rooms name="CarterGame">
+      <room>rooms\rm_Main</room>
     </rooms>
   </rooms>
   <help>
