@@ -83,7 +83,7 @@ if (keyboard_check(vk_escape)){
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_white);
-draw_text(750,view_yview+15,"Press Escape to go back");
+draw_text(750,view_yview+10,"Press Escape to go back");
 draw_text(750,view_yview+25,"Left/Right to move");
 draw_text(750,view_yview+40,"Space to jump");
 </string>
