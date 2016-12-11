@@ -52,19 +52,6 @@
   </views>
   <instances>
     <instance objName="obj_jumper_manager" x="32" y="9920" name="inst_035A3503" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="416" y="9920" name="inst_C507BFB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="640" y="9792" name="inst_55E70D9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="416" y="9600" name="inst_0310AE94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="128" y="9408" name="inst_E6C9F051" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="288" y="9152" name="inst_1ED719FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="736" y="8960" name="inst_1DC14118" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="480" y="8736" name="inst_E3200D2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="192" y="8608" name="inst_8FD477BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="32" y="8384" name="inst_0B795779" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="352" y="8320" name="inst_42BED714" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="320" y="8128" name="inst_AECD6914" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="736" y="8032" name="inst_7BCFCA5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPink" x="512" y="7808" name="inst_EBCE5C39" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_jumper" x="480" y="9888" name="inst_6AF07ED3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
