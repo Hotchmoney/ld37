@@ -83,7 +83,7 @@ if (asteroid_time % 50){
 
 if (keyboard_check(vk_escape)){
     obj_gamemanager.cur_asteroid_level = 0;
-    room_goto(2);
+    room_goto(main_room);
 }
 </string>
           </argument>

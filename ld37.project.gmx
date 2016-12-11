@@ -30,6 +30,12 @@
       <sprite>sprites\sp_player_jumper</sprite>
       <sprite>sprites\sp_platform_jumper</sprite>
     </sprites>
+    <sprite>sprites\sp_startBox</sprite>
+    <sprite>sprites\sp_jumpwarp</sprite>
+    <sprite>sprites\sp_credits</sprite>
+    <sprite>sprites\sp_asteroidswarp</sprite>
+    <sprite>sprites\sp_carterwarp</sprite>
+    <sprite>sprites\spr_underlineselect</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="CarterGame">
@@ -40,6 +46,9 @@
     <backgrounds name="textbox">
       <background>background\bGround</background>
     </backgrounds>
+    <background>background\bg_title</background>
+    <background>background\bg_towerroom</background>
+    <background>background\background6</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -79,13 +88,19 @@
       <object>objects\obj_player_jumper</object>
       <object>objects\obj_jumper_manager</object>
     </objects>
+    <object>objects\obj_startBox</object>
+    <object>objects\obj_credit</object>
+    <object>objects\obj_selectedbar</object>
+    <object>objects\obj_jumpwarp</object>
+    <object>objects\obj_asteroidswarp</object>
+    <object>objects\obj_cartergameWarp</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\title_screen</room>
+    <room>rooms\main_room</room>
     <rooms name="jumper">
       <room>rooms\rm_jumper</room>
     </rooms>
-    <room>rooms\title_screen</room>
-    <room>rooms\main_room</room>
     <rooms name="asteroids">
       <room>rooms\rm_asteroids</room>
     </rooms>
