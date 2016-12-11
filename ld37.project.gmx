@@ -96,6 +96,9 @@
     <object>objects\obj_cartergameWarp</object>
   </objects>
   <rooms name="rooms">
+    <rooms name="CarterGame">
+      <room>rooms\rm_Main</room>
+    </rooms>
     <room>rooms\title_screen</room>
     <room>rooms\main_room</room>
     <rooms name="jumper">
@@ -103,9 +106,6 @@
     </rooms>
     <rooms name="asteroids">
       <room>rooms\rm_asteroids</room>
-    </rooms>
-    <rooms name="CarterGame">
-      <room>rooms\rm_Main</room>
     </rooms>
     <room>rooms\chat_highscore</room>
   </rooms>
