@@ -22,13 +22,10 @@
     </sprites>
     <sprites name="textbox">
       <sprite>sprites\sShadow</sprite>
-      <sprite>sprites\sBlue</sprite>
-      <sprite>sprites\sGreen</sprite>
-      <sprite>sprites\sPink</sprite>
     </sprites>
     <sprites name="jumper">
-      <sprite>sprites\sGreen</sprite>
-      <sprite>sprites\sPink</sprite>
+      <sprite>sprites\sp_player_jumper</sprite>
+      <sprite>sprites\sp_platform_jumper</sprite>
     </sprites>
     <sprite>sprites\sp_startBox</sprite>
     <sprite>sprites\sp_jumpwarp</sprite>
@@ -48,7 +45,6 @@
     </backgrounds>
     <background>background\bg_title</background>
     <background>background\bg_towerroom</background>
-    <background>background\background6</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -76,7 +72,6 @@
       <object>objects\obj_Player</object>
     </objects>
     <objects name="textbox">
-      <object>objects\oDialogue</object>
       <object>objects\oDialogue_2</object>
       <object>objects\oControl</object>
       <object>objects\oGreen</object>
@@ -84,7 +79,6 @@
       <object>objects\oBlue</object>
     </objects>
     <objects name="jumper">
-      <object>objects\oPink</object>
       <object>objects\obj_player_jumper</object>
       <object>objects\obj_jumper_manager</object>
     </objects>
@@ -105,7 +99,7 @@
       <room>rooms\rm_asteroids</room>
     </rooms>
     <rooms name="CarterGame">
-      <room>rooms\rm_Main</room>
+      <room>rooms\rm_cartergame</room>
     </rooms>
     <room>rooms\chat_highscore</room>
     <room>rooms\room_credits</room>
