@@ -3,7 +3,7 @@
   <spriteName>spr_Player_Down</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -56,10 +56,10 @@ image_speed = 0;
             <string>///Handle Player Movement
 
 //Move the player
-if ( target_x &gt; x ) { x += 4 } //right
-if ( target_x &lt; x ) { x -= 4 } //left
-if ( target_y &gt; y ) { y += 4 } //down
-if ( target_y &lt; y ) { y -= 4 } //up
+if ( target_x &gt; x ) { x += 8 } //right
+if ( target_x &lt; x ) { x -= 8 } //left
+if ( target_y &gt; y ) { y += 8 } //down
+if ( target_y &lt; y ) { y -= 8 } //up
 
 //Check for destination
 if ( target_x == x &amp;&amp; target_y == y) {
@@ -77,6 +77,21 @@ if (keyboard_check(vk_left)) {
 } else if (keyboard_check(vk_down)) {
     Move('y', 1, spr_Player_Down);
 }
+
+// if the object is outside the camera
+if(x &lt; view_xview) { // to the left
+    view_xview[0] -= view_wview;
+}
+if(x &gt; view_xview + view_wview) { // to the right
+    view_xview[0] += view_wview;
+}
+if (y &lt; view_yview) { // top
+    view_yview[0] -= view_hview;
+}
+if(y &gt; view_yview + view_hview) { // bottom
+    view_yview[0] += view_hview;
+}
+
 </string>
           </argument>
         </arguments>
