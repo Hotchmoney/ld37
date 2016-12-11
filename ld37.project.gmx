@@ -94,11 +94,11 @@
     <object>objects\obj_cartergameWarp</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\title_screen</room>
-    <room>rooms\main_room</room>
     <rooms name="jumper">
       <room>rooms\rm_jumper</room>
     </rooms>
+    <room>rooms\title_screen</room>
+    <room>rooms\main_room</room>
     <rooms name="asteroids">
       <room>rooms\rm_asteroids</room>
     </rooms>
