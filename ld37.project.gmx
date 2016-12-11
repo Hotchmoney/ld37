@@ -101,6 +101,7 @@
       <object>objects\obj_startBox</object>
       <object>objects\obj_credit</object>
     </objects>
+    <object>objects\obj_computerwarp</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>

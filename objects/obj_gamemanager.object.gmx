@@ -79,6 +79,13 @@ boolsister = false;
         }
     }
 }
+
+if (room == chat_highscore){
+    if (keyboard_check(vk_escape))
+    {
+        room_goto(main_room);
+    }
+}
 </string>
           </argument>
         </arguments>
