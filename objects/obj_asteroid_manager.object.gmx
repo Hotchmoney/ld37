@@ -56,15 +56,18 @@ instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_playe
             <kind>1</kind>
             <string>if (gamestate==0)
 {
- if (round(asteroid_time) mod 5 == 0 &amp;&amp; asteroid_counter &lt;((8*level)+4))
+ var b = (round(asteroid_time));
+ if ( b mod 7 == 0 and asteroid_counter &lt;((4*level)+6*2))
  {
     level+=1;
     asteroid_time+=0.5;
     var i;
     for (i=0; i &lt; ((4*level)+6); i +=1)
     {
-        instance_create(view_xview-view_wview*random(1), view_yview-view_hview*random(1), obj_asteroids_asteroid);
-        instance_create(view_xview+view_wview*(1+random(1)), view_yview+view_hview*(1+random(1)), obj_asteroids_asteroid);
+        var k = random_range(-300,300);
+        if (k &lt;50 and k &gt; -50){ k +=200; }
+        instance_create(obj_player_asteroid.x+k, obj_player_asteroid.y+k*2, obj_asteroids_asteroid);
+        instance_create(obj_player_asteroid.x+k,obj_player_asteroid.y+k*2, obj_asteroids_asteroid);
         asteroid_counter +=2;
     }
  }
