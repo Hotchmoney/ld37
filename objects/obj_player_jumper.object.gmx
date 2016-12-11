@@ -66,7 +66,7 @@ if (place_meeting(x,y+1,obj_platform_jumper))
     vsp = key_jump * -jumpsp;
 }
 
-if (vsp &lt; 0) &amp;&amp; (!key_jump_held) vsp -= max(vsp,0);
+if (vsp &lt; 0) &amp;&amp; (!key_jump_held) vsp = max(vsp,0);
 
 if (place_meeting(x+hsp,y,obj_platform_jumper))
 {
