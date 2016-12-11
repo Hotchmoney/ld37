@@ -48,6 +48,7 @@
       <background>background\bGround</background>
     </backgrounds>
     <background>background\bg_title</background>
+    <background>background\bg_computer</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -87,15 +88,19 @@
       <object>objects\obj_jumper_manager</object>
       <object>objects\obj_player_jumper</object>
     </objects>
-    <object>objects\obj_startBox</object>
-    <object>objects\obj_credit</object>
     <object>objects\obj_selectedbar</object>
-    <object>objects\obj_jumpwarp</object>
-    <object>objects\obj_asteroidswarp</object>
-    <object>objects\obj_cartergameWarp</object>
-    <object>objects\obj_sparkles</object>
     <object>objects\obj_gamemanager</object>
     <object>objects\obj_main_room_background</object>
+    <objects name="particles">
+      <object>objects\obj_sparkles</object>
+    </objects>
+    <objects name="warps">
+      <object>objects\obj_cartergameWarp</object>
+      <object>objects\obj_asteroidswarp</object>
+      <object>objects\obj_jumpwarp</object>
+      <object>objects\obj_startBox</object>
+      <object>objects\obj_credit</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
