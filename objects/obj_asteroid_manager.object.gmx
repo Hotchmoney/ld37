@@ -129,8 +129,11 @@ if (keyboard_check(vk_escape)){
             <kind>1</kind>
             <string> draw_set_colour(c_white);
  draw_text(10,10,"Score : "+string(asteroid_time));
- draw_text(10,20,"Personal Best : "+string(obj_gamemanager.score_asteroids));
+ draw_text(10,25,"Personal Best : "+string(obj_gamemanager.score_asteroids));
  draw_text(750,10, "Press esc to go back");
+ draw_text(750,25, "Up/Down to move forward/back");
+ draw_text(750,40, "Left/Right to rotate");
+ draw_text(750,55, "Space to shoot");
 </string>
           </argument>
         </arguments>

@@ -97,6 +97,8 @@ if (place_meeting(x,y+vsp,obj_platform_jumper))
     vsp = 0;
 }
 y += vsp;
+
+if (place_meeting(x,y,obj_platform_jumper)) y+=10;
 </string>
           </argument>
         </arguments>
