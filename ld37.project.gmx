@@ -22,7 +22,6 @@
     </sprites>
     <sprites name="textbox">
       <sprite>sprites\sShadow</sprite>
-      <sprite>sprites\sBlue</sprite>
     </sprites>
     <sprites name="jumper">
       <sprite>sprites\sp_player_jumper</sprite>
@@ -46,7 +45,6 @@
     </backgrounds>
     <background>background\bg_title</background>
     <background>background\bg_towerroom</background>
-    <background>background\background6</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -63,7 +61,6 @@
     </fonts>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_gamemanager</object>
     <objects name="asteroids">
       <object>objects\obj_player_asteroid</object>
       <object>objects\obj_asteroid_manager</object>
@@ -74,12 +71,8 @@
       <object>objects\obj_Player</object>
     </objects>
     <objects name="textbox">
-      <object>objects\oDialogue</object>
       <object>objects\oDialogue_2</object>
-      <object>objects\oControl</object>
-      <object>objects\oGreen</object>
-      <object>objects\oPink</object>
-      <object>objects\oBlue</object>
+      <object>objects\oDialogue</object>
     </objects>
     <objects name="jumper">
       <object>objects\obj_platform_jumper</object>
@@ -92,21 +85,14 @@
     <object>objects\obj_jumpwarp</object>
     <object>objects\obj_asteroidswarp</object>
     <object>objects\obj_cartergameWarp</object>
+    <object>objects\obj_sparkles</object>
+    <object>objects\obj_gamemanager</object>
   </objects>
   <rooms name="rooms">
     <rooms name="jumper">
       <room>rooms\rm_jumper</room>
     </rooms>
-    <room>rooms\title_screen</room>
     <room>rooms\main_room</room>
-    <rooms name="asteroids">
-      <room>rooms\rm_asteroids</room>
-    </rooms>
-    <rooms name="CarterGame">
-      <room>rooms\rm_cartergame</room>
-    </rooms>
-    <room>rooms\chat_highscore</room>
-    <room>rooms\room_credits</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

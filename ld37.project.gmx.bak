@@ -24,8 +24,6 @@
     <sprites name="textbox">
       <sprite>sprites\sShadow</sprite>
       <sprite>sprites\sBlue</sprite>
-      <sprite>sprites\sGreen</sprite>
-      <sprite>sprites\sPink</sprite>
     </sprites>
     <sprites name="jumper">
       <sprite>sprites\sp_player_jumper</sprite>
@@ -68,10 +66,10 @@
   <objects name="objects">
     <object>objects\obj_gamemanager</object>
     <objects name="asteroids">
-      <object>objects\obj_bullet_asteroid</object>
       <object>objects\obj_player_asteroid</object>
       <object>objects\obj_asteroid_manager</object>
       <object>objects\obj_asteroids_asteroid</object>
+      <object>objects\obj_bullet_asteroid</object>
     </objects>
     <objects name="CarterGame">
       <object>objects\obj_Player</object>
@@ -86,8 +84,8 @@
     </objects>
     <objects name="jumper">
       <object>objects\obj_platform_jumper</object>
-      <object>objects\obj_player_jumper</object>
       <object>objects\obj_jumper_manager</object>
+      <object>objects\obj_player_jumper</object>
     </objects>
     <object>objects\obj_startBox</object>
     <object>objects\obj_credit</object>
@@ -97,18 +95,19 @@
     <object>objects\obj_cartergameWarp</object>
   </objects>
   <rooms name="rooms">
-    <rooms name="CarterGame">
-      <room>rooms\rm_Main</room>
-    </rooms>
-    <room>rooms\title_screen</room>
-    <room>rooms\main_room</room>
     <rooms name="jumper">
       <room>rooms\rm_jumper</room>
     </rooms>
+    <room>rooms\title_screen</room>
+    <room>rooms\main_room</room>
     <rooms name="asteroids">
       <room>rooms\rm_asteroids</room>
     </rooms>
+    <rooms name="CarterGame">
+      <room>rooms\rm_cartergame</room>
+    </rooms>
     <room>rooms\chat_highscore</room>
+    <room>rooms\room_credits</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
@@ -207,6 +206,8 @@
     <object>objects\obj_jumpwarp</object>
     <object>objects\obj_asteroidswarp</object>
     <object>objects\obj_cartergameWarp</object>
+    <object>objects\obj_sparkles</object>
+    <object>objects\obj_gamemanager</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
@@ -232,4 +233,4 @@
     <TutorialPage>0</TutorialPage>
   </TutorialState>
 </assets>
->>>>>>> 255538e3dc27fc42ea26db1657f37786f434fa92
+>>>>>>> ced1cae66ee79cb66f6bf8e12efde921180464ff

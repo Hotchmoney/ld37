@@ -78,26 +78,26 @@ ischild = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with obj_asteroid_manager{
-    asteroid_counter = asteroid_counter - 1;
+            <string>with (obj_asteroid_manager){
+    asteroid_counter-=1;
 }
-
 if (!ischild){
-    var child1;
-    var child2;
-    child1 = instance_create(x - random_range(-2,2), y - random_range(-2,2),obj_asteroids_asteroid);
-    child2 = instance_create(x + random_range(-2,2), y + random_range(-2,2),obj_asteroids_asteroid);
+    with(obj_asteroid_manager){
+        asteroid_counter+=2;
+    }
+    child1 = instance_create(x+random_range(-2,2),y+random_range(-2,2),obj_asteroids_asteroid);
+    child2 = instance_create(x+random_range(-2,2),y+random_range(-2,2),obj_asteroids_asteroid);
     child1.ischild = true;
     child2.ischild = true;
-    child1.image_xscale=0.5;
-    child1.image_yscale=0.5;
-    child2.image_xscale=0.5;
-    child2.image_yscale=0.5;
+    child1.image_xscale= 0.5;
+    child1.image_yscale = 0.5;
+    child2.image_xscale= 0.5;
+    child2.image_yscale = 0.5;
+    child1.speed = 1.5+random(2);
+    child2.speed = 1.5+random(2);
 }
 
 instance_destroy();
-
-
 </string>
           </argument>
         </arguments>
