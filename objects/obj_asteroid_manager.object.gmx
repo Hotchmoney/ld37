@@ -55,10 +55,7 @@ instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_playe
             <kind>1</kind>
             <string>if (gamestate==0)
 {
- if (asteroid_time&gt;=10){
-    asteroid_time=0;
- }
- if (asteroid_time ==0)
+ if (asteroid_time mod 5 &lt;= 0.3)
  {
     var i;
     for (i=0; i &lt; ((4*level)+8); i +=1)
@@ -71,11 +68,6 @@ instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_playe
  
  asteroid_time = asteroid_time + (delta_time/1000000);
  
-}else if (gamestate==1){
-//win
-    obj_gamemanager.cur_asteroid_level +=1;
-    room_restart();
-
 }else{
 //lose
     obj_gamemanager.score_asteroids = level;
@@ -83,8 +75,15 @@ instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_playe
     room_restart();
 }
 
-if (asteroid_counter==0){
-    gamestate =1;
+if (asteroid_time % 50){
+    level +=1;
+}
+
+
+
+if (keyboard_check(vk_escape)){
+    obj_gamemanager.cur_asteroid_level = 0;
+    room_goto(main_room);
 }
 </string>
           </argument>
