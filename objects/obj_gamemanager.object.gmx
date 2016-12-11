@@ -29,6 +29,11 @@
 cur_jumper_level=0;
 score_jumper = 0;
 cur_asteroid_level = 0;
+
+boolmom1 = false;
+boolmom2 = false;
+boolbird = false;
+boolsister = false;
 </string>
           </argument>
         </arguments>

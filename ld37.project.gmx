@@ -45,7 +45,7 @@
       <background>background\bGround</background>
     </backgrounds>
     <background>background\bg_title</background>
-    <background>background\bg_towerroom</background>
+    <background>background\bg_towerroom_nb_nm12</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
