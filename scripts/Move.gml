@@ -15,10 +15,10 @@ if (!moving) {
             prev_y = target_y;
             target_y += neg*32;
         }
-    } until (!tile_layer_find(2, target_x, target_y)) //slide on ice
+    } until (!instance_position(target_x, target_y, obj_ice));
     
     //rock
-    if (tile_layer_find(3, target_x, target_y)) {
+    if (instance_position(target_x, target_y, obj_rock)) {
         target_x = prev_x;
         target_y = prev_y;
     } else {
