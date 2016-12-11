@@ -26,9 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>gamestate = 0;
-level = level = obj_gamemanager.cur_asteroid_level;
+level = obj_gamemanager.cur_asteroid_level;
 asteroid_counter = 0;
 asteroid_time = 0;
+lag = false;
 instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_player_asteroid);
 
 </string>
@@ -55,10 +56,12 @@ instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_playe
             <kind>1</kind>
             <string>if (gamestate==0)
 {
- if (asteroid_time mod 5 &lt;= 0.3)
+ if (round(asteroid_time) mod 5 == 0 &amp;&amp; asteroid_counter &lt;((8*level)+4))
  {
+    level+=1;
+    asteroid_time+=0.5;
     var i;
-    for (i=0; i &lt; ((4*level)+8); i +=1)
+    for (i=0; i &lt; ((4*level)+6); i +=1)
     {
         instance_create(view_xview-view_wview*random(1), view_yview-view_hview*random(1), obj_asteroids_asteroid);
         instance_create(view_xview+view_wview*(1+random(1)), view_yview+view_hview*(1+random(1)), obj_asteroids_asteroid);
@@ -75,7 +78,7 @@ instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_playe
     room_restart();
 }
 
-if (asteroid_time % 50){
+if (asteroid_time mod 15 == 0){
     level +=1;
 }
 
@@ -85,6 +88,30 @@ if (keyboard_check(vk_escape)){
     obj_gamemanager.cur_asteroid_level = 0;
     room_goto(main_room);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string> draw_set_colour(c_white);
+ draw_text(10,10,"Level : "+string(level));
 </string>
           </argument>
         </arguments>

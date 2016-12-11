@@ -27,6 +27,14 @@
             <kind>1</kind>
             <string>count = 0;
 threshold = 100000;
+lagleft = false;
+lagright = false;
+lagup = false;
+lagdown = false;
+countleft = 0;
+countright = 0;
+countup = 0;
+countdown=0;
 </string>
           </argument>
         </arguments>
@@ -59,6 +67,41 @@ if (count &gt;= threshold){
 }else{
     count += delta_time;
 }
+
+if (lagup){
+    countup+=(delta_time/1000000);
+    if ( countup &gt;= 0.1){
+        motion_add(image_angle,0.2);
+        if (speed &gt; 5) speed = 5;
+        countup = 0;
+        lagup = false;
+    }
+}
+if (lagdown){
+    countdown+=(delta_time/1000000);
+    if (countdown &gt;= 0.5){
+        motion_add(image_angle,-0.2);
+        if (speed &lt; -5) speed =-5;
+        countdown=0;
+        lagdown = false;
+    }
+}
+if(lagleft){
+    countleft+=(delta_time/1000000);
+    if(countleft &gt;= 0.1){
+        image_angle = image_angle + 2;
+        countleft = 0;
+        lagleft = false;
+    }
+}
+if(lagright){
+    countright+=(delta_time/1000000);
+    if(countright &gt;=0.1){
+        image_angle = image_angle -2;
+        countleft = 0;
+        lagright = false;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -81,8 +124,12 @@ if (count &gt;= threshold){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>motion_add(image_angle,-0.2);
-if (speed &lt; -5) speed =-5;
+            <string>if(!obj_asteroid_manager.lag){
+    motion_add(image_angle,-0.2);
+    if (speed &lt; -5) speed =-5;
+}else{
+    lagdown = true;
+}
 </string>
           </argument>
         </arguments>
@@ -105,7 +152,11 @@ if (speed &lt; -5) speed =-5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = image_angle -2;
+            <string>if(!obj_asteroid_manager.lag){
+    image_angle = image_angle -2;
+}else{
+    lagright = true;
+}
 </string>
           </argument>
         </arguments>
@@ -128,8 +179,12 @@ if (speed &lt; -5) speed =-5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>motion_add(image_angle,0.2);
-if (speed &gt; 5) speed = 5;
+            <string>if(!obj_asteroid_manager.lag){
+    motion_add(image_angle,0.2);
+    if (speed &gt; 5) speed = 5;
+}else{
+    lagup = true;
+}
 </string>
           </argument>
         </arguments>
@@ -152,7 +207,11 @@ if (speed &gt; 5) speed = 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = image_angle + 2;
+            <string>if(!obj_asteroid_manager.lag){
+    image_angle = image_angle + 2;
+}else{
+    lagleft = true;
+}
 
 </string>
           </argument>

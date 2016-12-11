@@ -50,7 +50,11 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
-  <instances/>
+  <instances>
+    <instance objName="obj_jumpwarp" x="160" y="160" name="inst_758F4776" locked="0" code="" scaleX="5.53125" scaleY="7.09677410125732" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cartergameWarp" x="704" y="384" name="inst_3D719703" locked="0" code="" scaleX="-3.35483860969543" scaleY="7.45161294937134" colour="4294967295" rotation="0"/>
+    <instance objName="obj_asteroidswarp" x="352" y="384" name="inst_D22B3732" locked="0" code="" scaleX="1.5" scaleY="2.5" colour="4294967295" rotation="0"/>
+  </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

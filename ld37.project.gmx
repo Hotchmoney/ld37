@@ -85,6 +85,8 @@
     <object>objects\obj_jumpwarp</object>
     <object>objects\obj_asteroidswarp</object>
     <object>objects\obj_cartergameWarp</object>
+    <object>objects\obj_sparkles</object>
+    <object>objects\obj_gamemanager</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
