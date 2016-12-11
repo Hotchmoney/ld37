@@ -89,6 +89,7 @@
     <object>objects\obj_gamemanager</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\title_screen</room>
     <rooms name="CarterGame">
       <room>rooms\rm_cartergame</room>
     </rooms>
@@ -101,7 +102,6 @@
     <room>rooms\main_room</room>
     <room>rooms\chat_highscore</room>
     <room>rooms\room_credits</room>
-    <room>rooms\title_screen</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
