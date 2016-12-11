@@ -26,14 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>score_asteroids = 0;
+prev_score_asteroids = 0;
 cur_jumper_level=0;
 score_jumper = 0;
-cur_asteroid_level = 0;
+better_asteroids = false;
 
 boolmom1 = false;
 boolmom2 = false;
 boolbird = false;
 boolsister = false;
+boolnurse = false;
 
 
 
@@ -77,6 +79,10 @@ boolsister = false;
         if (obj_gamemanager.boolsister){
             image_index =4;
         }
+        if (obj_gamemanager.boolnurse)
+        {
+            image_index=5;
+        }
     }
 }
 
@@ -85,6 +91,12 @@ if (room == chat_highscore){
     {
         room_goto(main_room);
     }
+}
+
+if (room == main_room and room == room_credits){
+    if(keyboard_check(vk_escape)){
+        room_goto(title_screen);
+    }   
 }
 </string>
           </argument>
