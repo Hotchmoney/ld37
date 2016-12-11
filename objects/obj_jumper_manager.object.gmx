@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>gamestate = 0;
 level = 0;//obj_gamemanager.cur_jumper_level;
-
+instance_create(416,9824,obj_player_jumper);
 </string>
           </argument>
         </arguments>
@@ -58,7 +58,7 @@ level = 0;//obj_gamemanager.cur_jumper_level;
 
 if (keyboard_check(vk_escape)){
     //obj_gamemanager.cur_jumper_level = 0;
-    room_goto(2);
+    room_goto(main_room);
 }
 </string>
           </argument>
