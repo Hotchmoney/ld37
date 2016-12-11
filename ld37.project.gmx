@@ -72,10 +72,7 @@
     </objects>
     <objects name="textbox">
       <object>objects\oDialogue_2</object>
-      <object>objects\oControl</object>
-      <object>objects\oGreen</object>
-      <object>objects\oPink</object>
-      <object>objects\oBlue</object>
+      <object>objects\oDialogue</object>
     </objects>
     <objects name="jumper">
       <object>objects\obj_platform_jumper</object>
