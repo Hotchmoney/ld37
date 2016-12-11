@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>gamestate = 0;
 level = 0;//obj_gamemanager.cur_jumper_level;
-
+instance_create(416,9824,obj_player_jumper);
 </string>
           </argument>
         </arguments>
