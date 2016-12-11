@@ -92,12 +92,6 @@ if (room == chat_highscore){
         room_goto(main_room);
     }
 }
-
-if (room == main_room or room == room_credits){
-    if(keyboard_check(vk_escape)){
-        room_goto(title_screen);
-    }   
-}
 </string>
           </argument>
         </arguments>

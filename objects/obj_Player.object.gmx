@@ -125,7 +125,8 @@ if (keyboard_check(vk_escape)){
             <string>draw_self();
 
 draw_set_colour(c_black);
-draw_text(view_xview+450, view_yview+10, "Press esc to go back");
+draw_text(view_xview+300, view_yview+10, "Press esc to go back");
+draw_text(view_xview+300, view_yview+25,"Up/Down/Left/Right arrow key to move");
 </string>
           </argument>
         </arguments>
