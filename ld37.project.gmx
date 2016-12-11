@@ -27,8 +27,8 @@
       <sprite>sprites\sPink</sprite>
     </sprites>
     <sprites name="jumper">
-      <sprite>sprites\sp_player_jumper</sprite>
-      <sprite>sprites\sp_platform_jumper</sprite>
+      <sprite>sprites\sGreen</sprite>
+      <sprite>sprites\sPink</sprite>
     </sprites>
     <sprite>sprites\sp_startBox</sprite>
     <sprite>sprites\sp_jumpwarp</sprite>
@@ -65,9 +65,9 @@
     </fonts>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_gamemanager</object>
+    <object>objects\obj_player_jumper</object>
     <objects name="asteroids">
-      <object>objects\obj_bullet_asteroid</object>
+      <object>objects\obj_player_jumper</object>
       <object>objects\obj_player_asteroid</object>
       <object>objects\obj_asteroid_manager</object>
       <object>objects\obj_asteroids_asteroid</object>
@@ -84,7 +84,7 @@
       <object>objects\oBlue</object>
     </objects>
     <objects name="jumper">
-      <object>objects\obj_platform_jumper</object>
+      <object>objects\oPink</object>
       <object>objects\obj_player_jumper</object>
       <object>objects\obj_jumper_manager</object>
     </objects>
@@ -108,6 +108,7 @@
       <room>rooms\rm_Main</room>
     </rooms>
     <room>rooms\chat_highscore</room>
+    <room>rooms\room_credits</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
