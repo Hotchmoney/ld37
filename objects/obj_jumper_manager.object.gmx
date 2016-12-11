@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>gamestate = 0;
-level = 0;//obj_gamemanager.cur_jumper_level;
+level = 10000;
+lag = false;
 instance_create(416,9824,obj_player_jumper);
 </string>
           </argument>
@@ -51,13 +52,15 @@ instance_create(416,9824,obj_player_jumper);
           <argument>
             <kind>1</kind>
             <string>if (level&gt;=100){
-    //obj_gamemanager.score_jumper = level;
-    //obj_gamemanager.cur_jumper_level=0;
+    obj_gamemanager.score_jumper = level;
+    obj_gamemanager.cur_jumper_level=0;
     room_restart();
 }
 
 if (keyboard_check(vk_escape)){
-    //obj_gamemanager.cur_jumper_level = 0;
+    if (obj_gamemanager.score_jumper &lt; level) obj_gamemanager.score_jumper = level;
+    obj_gamemanager.cur_jumper_level = 0;
+    show_debug_message(obj_gamemanager.score_jumper);
     room_goto(main_room);
 }
 </string>
