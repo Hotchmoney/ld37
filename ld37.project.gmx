@@ -6,6 +6,7 @@
   <datafiles number="1" name="datafiles"/>
   <NewExtensions>
     <extension index="0">extensions\Smooth Dialogue Engine</extension>
+    <extension index="1">extensions\Simple Fullscreen Shaders</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -53,6 +54,11 @@
       <script>scripts\dialogue.gml</script>
     </scripts>
   </scripts>
+  <shaders name="shaders">
+    <shaders name="LensManipulation">
+      <shader type="GLSLES">shaders\FishEye.shader</shader>
+    </shaders>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\fnt</font>
     <fonts name="textbox">

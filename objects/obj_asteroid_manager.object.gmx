@@ -115,6 +115,7 @@ if (keyboard_check(vk_escape)){
             <kind>1</kind>
             <string> draw_set_colour(c_white);
  draw_text(10,10,"Level : "+string(level));
+ draw_text(750,10, "Press esc to go back");
 </string>
           </argument>
         </arguments>
