@@ -77,6 +77,7 @@
     <objects name="jumper">
       <object>objects\obj_platform_jumper</object>
       <object>objects\obj_player_jumper</object>
+      <object>objects\obj_jumper_manager</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>cur_asteroid_level=0;
 score_asteroids = 0;
+cur_jumper_level=0;
+score_jumper = 0;
 </string>
           </argument>
         </arguments>

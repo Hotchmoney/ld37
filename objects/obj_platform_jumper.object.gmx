@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>sprite_index = -1;
+touched = false;
 </string>
           </argument>
         </arguments>
