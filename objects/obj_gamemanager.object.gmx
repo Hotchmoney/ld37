@@ -93,7 +93,7 @@ if (room == chat_highscore){
     }
 }
 
-if (room == main_room and room == room_credits){
+if (room == main_room or room == room_credits){
     if(keyboard_check(vk_escape)){
         room_goto(title_screen);
     }   
