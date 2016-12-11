@@ -21,8 +21,8 @@
       <sprite>sprites\spr_Player_Up</sprite>
       <sprite>sprites\spr_Player_Left</sprite>
       <sprite>sprites\spr_grass</sprite>
-      <sprite>sprites\spr_rock</sprite>
-      <sprite>sprites\spr_ice</sprite>
+      <sprite>sprites\sp_player_jumper</sprite>
+      <sprite>sprites\sp_platform_jumper</sprite>
       <sprite>sprites\spr_ground</sprite>
     </sprites>
     <sprites name="textbox">
@@ -79,11 +79,11 @@
       <object>objects\obj_Player</object>
       <object>objects\obj_ice</object>
       <object>objects\obj_rock</object>
-      <object>objects\obj_grass</object>
+      <object>objects\obj_platform_jumper</object>
       <object>objects\spr_carterGround</object>
     </objects>
     <objects name="textbox">
-      <object>objects\oDialogue_2</object>
+      <object>objects\obj_player_jumper</object>
       <object>objects\oDialogue</object>
     </objects>
     <objects name="jumper">
