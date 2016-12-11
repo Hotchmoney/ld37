@@ -30,6 +30,8 @@ hsp = 0;
 vsp = 0;
 jumpsp = 20;
 movesp = 4;
+image_index = 0;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -58,14 +60,22 @@ key_jump = keyboard_check_pressed(vk_space);
 key_jump_held = keyboard_check(vk_space);
 
 move = key_right - key_left;
+if (move &lt; 0){
+image_xscale = -1;
+}
+
 hsp = move * movesp;
 if (vsp &lt; 10) vsp += grav;
 
 if (place_meeting(x,y+1,obj_platform_jumper))
 {
     vsp = key_jump * -jumpsp;
+    image_index = 0;
 }
-
+else
+{
+    image_index = 1;
+}
 if (vsp &lt; 0) &amp;&amp; (!key_jump_held) vsp = max(vsp,0);
 
 if (place_meeting(x+hsp,y,obj_platform_jumper))
@@ -87,8 +97,6 @@ if (place_meeting(x,y+vsp,obj_platform_jumper))
     vsp = 0;
 }
 y += vsp;
-
-show_debug_message("Here");
 </string>
           </argument>
         </arguments>
