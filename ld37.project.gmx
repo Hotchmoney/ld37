@@ -34,6 +34,9 @@
     <sprite>sprites\sp_asteroidswarp</sprite>
     <sprite>sprites\sp_carterwarp</sprite>
     <sprite>sprites\spr_underlineselect</sprite>
+    <sprites name="backgrounds for main room">
+      <sprite>sprites\sp_main_room</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="CarterGame">
@@ -45,7 +48,6 @@
       <background>background\bGround</background>
     </backgrounds>
     <background>background\bg_title</background>
-    <background>background\bg_towerroom_nb_nm12</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -93,6 +95,7 @@
     <object>objects\obj_cartergameWarp</object>
     <object>objects\obj_sparkles</object>
     <object>objects\obj_gamemanager</object>
+    <object>objects\obj_main_room_background</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
