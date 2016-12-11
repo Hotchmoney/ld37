@@ -100,8 +100,8 @@
       <object>objects\obj_jumpwarp</object>
       <object>objects\obj_startBox</object>
       <object>objects\obj_credit</object>
+      <object>objects\obj_computerwarp</object>
     </objects>
-    <object>objects\obj_computerwarp</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
