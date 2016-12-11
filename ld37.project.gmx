@@ -61,12 +61,11 @@
     </fonts>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_player_jumper</object>
     <objects name="asteroids">
-      <object>objects\obj_player_jumper</object>
       <object>objects\obj_player_asteroid</object>
       <object>objects\obj_asteroid_manager</object>
       <object>objects\obj_asteroids_asteroid</object>
+      <object>objects\obj_bullet_asteroid</object>
     </objects>
     <objects name="CarterGame">
       <object>objects\obj_Player</object>
@@ -79,8 +78,9 @@
       <object>objects\oBlue</object>
     </objects>
     <objects name="jumper">
-      <object>objects\obj_player_jumper</object>
+      <object>objects\obj_platform_jumper</object>
       <object>objects\obj_jumper_manager</object>
+      <object>objects\obj_player_jumper</object>
     </objects>
     <object>objects\obj_startBox</object>
     <object>objects\obj_credit</object>
