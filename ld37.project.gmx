@@ -75,13 +75,13 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <rooms name="CarterGame">
+      <room>rooms\rm_Main</room>
+    </rooms>
     <room>rooms\title_screen</room>
     <room>rooms\main_room</room>
     <rooms name="asteroids">
       <room>rooms\rm_asteroids</room>
-    </rooms>
-    <rooms name="CarterGame">
-      <room>rooms\rm_Main</room>
     </rooms>
   </rooms>
   <help>
