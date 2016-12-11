@@ -55,6 +55,7 @@
     <scripts name="textbox">
       <script>scripts\dialogue.gml</script>
     </scripts>
+    <script>scripts\script2.gml</script>
   </scripts>
   <shaders name="shaders">
     <shaders name="LensManipulation">

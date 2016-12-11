@@ -29,6 +29,7 @@
 target_x = x;
 target_y = y;
 moving = false;
+numMoves = 0;
 
 image_speed = 0;
 </string>
@@ -63,6 +64,7 @@ if ( target_y &lt; y ) { y -= 8 } //up
 
 //Check for destination
 if ( target_x == x &amp;&amp; target_y == y) {
+    numMoves++;
     moving = false;
     image_speed = 0;
 }
@@ -92,6 +94,38 @@ if(y &gt; view_yview + view_hview) { // bottom
     view_yview[0] += view_hview;
 }
 
+// esc
+if (keyboard_check(vk_escape)){
+    obj_gamemanager.cur_asteroid_level = 0;
+    room_goto(main_room);
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+
+draw_set_colour(c_black);
+draw_text(view_xview+450, view_yview+10, "Press esc to go back");
 </string>
           </argument>
         </arguments>
