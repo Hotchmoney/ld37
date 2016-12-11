@@ -87,6 +87,8 @@ if (place_meeting(x,y+vsp,obj_platform_jumper))
     vsp = 0;
 }
 y += vsp;
+
+show_debug_message("Here");
 </string>
           </argument>
         </arguments>
