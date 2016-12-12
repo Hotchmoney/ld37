@@ -223,7 +223,40 @@ switch (argument0) { // run through possible scenes
         obj.xx[3] = obj_main_roomtext.x;
         obj.yy[3] = obj_main_roomtext.y;
         
+        obj.msg[4] = "Thought: This stupid insurance company hasn’t done anything but piss me off. Maybe trying out my Crystal Ball will take my mind off it.";
+        obj.xx[4] = obj_main_roomtext.x;
+        obj.yy[4] = obj_main_roomtext.y;
+    
+        break;
+    case(9):
+        obj.msg[0] = "Thought: Hmmmm....";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+    
+        obj.msg[1] = "Thought: What the heck? My arms… they’re so stiff! The curse must be spreading again. Damn it!";
+        obj.xx[1] = obj_main_roomtext.x;
+        obj.yy[1] = obj_main_roomtext.y;
         
+        break;
+    case(10):
+        obj.msg[0] = "Thought: Wow, that made playing a lot harder. I hope it doesn’t affect my ranking on the scoreboard. [PRESS Z TO CONTINUE]";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+   
+        break; 
+    case(11):
+        obj.msg[0] = "Thought: Wow, what a JERK! I bet he uses 9chant or something. How did he beat my score! I’ll show him.  There’s no way I’d play HOTS like some kind of peasant! [PRESS Z TO CONTINUE]";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+        
+        break;
+    case(12):
+        obj.msg[0] = "Thought: I should check the score boards to see if I beat that jerkwad 9chanter. [PRESS Z TO CONTINUE]";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+
+        
+
         
         // SCENE TEMPLATE
         /*case(numb): // ensure numb is not used in cases above
