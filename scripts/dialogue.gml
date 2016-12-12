@@ -122,7 +122,7 @@ switch (argument0) { // run through possible scenes
         
         break;
         
-    case(2): // after first game
+    case(2): //during first game
         obj.msg[0] = "Mom (Talia): Okay, sorry, I know you said to leave you alone… but I’m just going to put this dinner here on your bed. ";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;

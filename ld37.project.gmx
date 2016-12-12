@@ -89,7 +89,7 @@
     <objects name="textbox">
       <object>objects\oDialogue</object>
       <object>objects\oDialogue_2</object>
-      <object>objects\oControl</object>
+      <object>objects\obj_jumper_manager</object>
     </objects>
     <objects name="jumper">
       <object>objects\obj_platform_jumper</object>
