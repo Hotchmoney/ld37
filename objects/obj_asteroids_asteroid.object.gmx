@@ -78,7 +78,9 @@ ischild = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with (obj_asteroid_manager){
+            <string>audio_play_sound(snd_lazer, 0, false);
+
+with (obj_asteroid_manager){
     asteroid_counter-=1;
 }
 if (!ischild){
@@ -134,7 +136,9 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with obj_asteroid_manager
+            <string>audio_play_sound(snd_lazer, 0, false);
+
+with obj_asteroid_manager
 {
     gamestate = 2;
 }

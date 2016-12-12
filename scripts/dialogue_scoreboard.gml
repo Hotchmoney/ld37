@@ -28,12 +28,17 @@ var obj16 = instance_create(obj15.x, obj15.y, oDialogue_scoreboard);
 var obj17 = instance_create(obj16.x, obj16.y, oDialogue_scoreboard);
 
 switch (argument0) { // run through possible scenes
+
+
+
+
+
     case (0):
-        obj1.msg[0] = "1. Falak";
-        obj2.msg[0] = "2. KewtDeerNoFear";
-        obj3.msg[0] = "3. [EVL]WitchWench99";
-        obj4.msg[0] = "4. Real_fed_Trollzz";
-        obj5.msg[0] = "5. xxXHuntsMaster69Xxx";
+        obj1.msg[0] = "1. FemmePirouette";
+        obj2.msg[0] = "2. [EVL]WitchWench99";
+        obj3.msg[0] = "3. xxXHuntsMaster69Xxx ";
+        obj4.msg[0] = "4. Real_fed_Trollz";
+        obj5.msg[0] = "5. AssDragon";
         
         obj6.msg[0] = "MageLordMichael: This is such bullshit";
         obj7.msg[0] = "MageLordMichael: Lag 4 days";
@@ -57,19 +62,7 @@ switch (argument0) { // run through possible scenes
         obj9.msg[0] = "CockGoblin: probably some SJW";
         break;
         
-    case (2):
-        obj1.msg[0] = "1. CockGoblin";
-        obj2.msg[0] = "2. FemmePirouette";
-        obj3.msg[0] = "3. xxXHuntsMaster69Xxx";
-        obj4.msg[0] = "4. Real_fed_Trollz";
-        obj5.msg[0] = "5. AssDragon";
-        
-        obj6.msg[0] = "CockGoblin: Lol get gud newb";
-        obj7.msg[0] = "CockGoblin: Go play fukkin HOTS";
-        obj8.msg[0] = "CockGoblin: @FemmePirouette absolute garbage";
-        obj9.msg[0] = "CockGoblin: probably some SJW";
-        
-    case(3):
+    case(2):
         obj1.msg[0] = "1. FemmePirouette";
         obj2.msg[0] = "2. CockGoblin";
         obj3.msg[0] = "3. [EVL]WitchWench99";
@@ -84,7 +77,7 @@ switch (argument0) { // run through possible scenes
         obj11.msg[0] = "xxXHuntsMaster69Xxx: Mods pls ban"
         break;
         
-    case(4):
+    case(3):
         obj1.msg[0] = "FemmePirouette";
         obj2.msg[0] = "CockGoblin";
         obj3.msg[0] = "[EVL]WitchWench99";

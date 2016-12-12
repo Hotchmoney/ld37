@@ -21,10 +21,14 @@ if (!moving) {
     if (instance_position(target_x, target_y, obj_rock)) {
         target_x = prev_x;
         target_y = prev_y;
-    } else {
+    }
+    
+    //has moved
+    show_debug_message(string(x)+":"+string(target_x)+", "+string(y)+":"+string(target_y));
+    if (target_x != x || target_y != y) {
+        gameScore--;
         image_speed = 0.3;
     }
     
-    gameScore--;
     moving = true;
 }

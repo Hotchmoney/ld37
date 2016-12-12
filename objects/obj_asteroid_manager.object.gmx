@@ -32,6 +32,10 @@ asteroid_time = 0;
 lag = obj_gamemanager.lag;
 instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_player_asteroid);
 
+audio_stop_sound(snd_bedroomMusic);
+if (!audio_is_playing(snd_hamadaGame)) {
+    audio_play_sound(snd_hamadaGame, 0, true);
+}
 </string>
           </argument>
         </arguments>

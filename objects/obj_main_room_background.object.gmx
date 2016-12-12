@@ -26,6 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
+audio_stop_sound(snd_hamadaGame);
+
+if (!audio_is_playing(snd_bedroomMusic)) {
+    audio_play_sound(snd_bedroomMusic, 0, true);
+}
 </string>
           </argument>
         </arguments>

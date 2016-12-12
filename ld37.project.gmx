@@ -9,12 +9,12 @@
     <extension index="1">extensions\Simple Fullscreen Shaders</extension>
   </NewExtensions>
   <sounds name="sound">
+    <sound>sound\snd_titleScreen</sound>
     <sound>sound\snd_bedroomMusic</sound>
     <sound>sound\snd_carterGame</sound>
     <sound>sound\snd_hamadaGame</sound>
     <sound>sound\snd_hotchkissGame</sound>
     <sound>sound\snd_hoverSparkle</sound>
-    <sound>sound\snd_titleScreen</sound>
     <sound>sound\snd_jump</sound>
     <sound>sound\snd_lazer</sound>
     <sound>sound\snd_selection</sound>
@@ -103,12 +103,11 @@
       <object>objects\oDialogue</object>
       <object>objects\oDialogue_2</object>
       <object>objects\oDialogue_scoreboard</object>
-      <object>objects\obj_platform_jumper</object>
     </objects>
     <objects name="jumper">
       <object>objects\obj_platform_jumper</object>
       <object>objects\obj_player_jumper</object>
-      <object>objects\obj_player_jumper</object>
+      <object>objects\obj_jumper_manager</object>
     </objects>
     <objects name="particles">
       <object>objects\obj_sparkles</object>

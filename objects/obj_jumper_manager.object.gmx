@@ -29,6 +29,10 @@
 level = 9824-9824;
 lag = obj_gamemanager.lag;
 instance_create(416,9824,obj_player_jumper);
+
+audio_stop_sound(snd_bedroomMusic);
+audio_play_sound(snd_hotchkissGame, 0, true);
+
 </string>
           </argument>
         </arguments>
@@ -73,6 +77,29 @@ if (keyboard_check(vk_escape)){
 }
 
 if (obj_gamemanager.score_jumper &lt; level and obj_player_jumper.vsp == 0) obj_gamemanager.score_jumper = level;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>audio_stop_sound(snd_hotchkissGame);
 </string>
           </argument>
         </arguments>

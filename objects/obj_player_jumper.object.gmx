@@ -70,6 +70,9 @@ if (vsp &lt; 10) vsp += grav;
 if (place_meeting(x,y+1,obj_platform_jumper))
 {
     vsp = key_jump * -jumpsp;
+    if(key_jump) {
+        audio_play_sound(snd_jump,0 ,false);
+    }
     image_index = 0;
 }
 else

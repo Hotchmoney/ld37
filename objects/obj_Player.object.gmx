@@ -33,6 +33,10 @@ par = 117; //optimal moves + 50
 gameScore = par;
 levelScore = 1;
 image_speed = 0;
+
+audio_stop_sound(snd_bedroomMusic);
+audio_play_sound(snd_carterGame, 0, true);
+
 </string>
           </argument>
         </arguments>
@@ -78,7 +82,7 @@ if (keyboard_check(vk_left)) {
 } else if (keyboard_check(vk_right)) {
     Move('x', 1, spr_Player_Right);
 } else if (keyboard_check(vk_up)) {
-    Move('y', -1, spr_Player_Up);
+    Move('y', -1, spr_Player_Down);
 } else if (keyboard_check(vk_down)) {
     Move('y', 1, spr_Player_Down);
 }
@@ -110,6 +114,29 @@ if (keyboard_check(vk_escape)){
 }
 
 obj_main_roomtext.x = view_xview+view_wview*0.5;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>audio_stop_sound(snd_carterGame);
 </string>
           </argument>
         </arguments>
