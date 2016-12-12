@@ -62,6 +62,8 @@ if (level &lt; -4){
     room_restart();
 }
 
+obj_main_roomtext.y = view_yview+view_hview*0.5+672;
+
 level = round((9900-obj_player_jumper.y)/100);
 
 if (keyboard_check(vk_escape)){

@@ -108,6 +108,8 @@ if (keyboard_check(vk_escape)){
     }
     room_goto(main_room);
 }
+
+obj_main_roomtext.x = view_xview+view_wview*0.5;
 </string>
           </argument>
         </arguments>
