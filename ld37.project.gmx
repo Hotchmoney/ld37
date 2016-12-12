@@ -91,7 +91,7 @@
       <object>objects\obj_jumper_manager</object>
       <object>objects\obj_player_jumper</object>
     </objects>
-    <object>objects\obj_selectedbar</object>
+    <object>objects\obj_jumper_manager</object>
     <object>objects\obj_gamemanager</object>
     <object>objects\obj_main_room_background</object>
     <objects name="particles">
