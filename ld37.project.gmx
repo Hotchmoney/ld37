@@ -8,7 +8,17 @@
     <extension index="0">extensions\Smooth Dialogue Engine</extension>
     <extension index="1">extensions\Simple Fullscreen Shaders</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_bedroomMusic</sound>
+    <sound>sound\snd_carterGame</sound>
+    <sound>sound\snd_hamadaGame</sound>
+    <sound>sound\snd_hotchkissGame</sound>
+    <sound>sound\snd_hoverSparkle</sound>
+    <sound>sound\snd_titleScreen</sound>
+    <sound>sound\snd_jump</sound>
+    <sound>sound\snd_lazer</sound>
+    <sound>sound\snd_selection</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="asteroids">
       <sprite>sprites\sp_bullet_asteroid</sprite>
