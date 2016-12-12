@@ -29,7 +29,7 @@
 level = 0;
 asteroid_counter = 0;
 asteroid_time = 0;
-lag = false;
+lag = obj_gamemanager.lag;
 instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_player_asteroid);
 
 </string>

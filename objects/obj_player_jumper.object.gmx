@@ -61,7 +61,7 @@ key_jump_held = keyboard_check(vk_space);
 
 move = key_right - key_left;
 if (move &lt; 0){
-image_xscale = -1;
+    image_xscale = -1;
 }
 
 hsp = move * movesp;
@@ -76,8 +76,9 @@ else
 {
     image_index = 1;
 }
-if (vsp &lt; 0) &amp;&amp; (!key_jump_held) vsp = max(vsp,0);
-if (obj_jumper_manager.lag==true and random(0,720) == 0){
+if ((vsp &lt; 0) &amp;&amp; (!key_jump_held)) vsp = max(vsp,0);
+
+if (obj_jumper_manager.lag==true and random_range(0,720) == 0){
     vsp = max(vsp,0);
 }
 

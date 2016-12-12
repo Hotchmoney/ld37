@@ -91,9 +91,6 @@
       <object>objects\obj_jumper_manager</object>
       <object>objects\obj_player_jumper</object>
     </objects>
-    <object>objects\obj_jumper_manager</object>
-    <object>objects\obj_gamemanager</object>
-    <object>objects\obj_main_room_background</object>
     <objects name="particles">
       <object>objects\obj_sparkles</object>
     </objects>
@@ -105,6 +102,9 @@
       <object>objects\obj_credit</object>
       <object>objects\obj_computerwarp</object>
     </objects>
+    <object>objects\obj_selectedbar</object>
+    <object>objects\obj_gamemanager</object>
+    <object>objects\obj_main_room_background</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
