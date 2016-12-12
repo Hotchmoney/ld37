@@ -160,7 +160,17 @@ alarm[0] = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (room == main_room)
+            <string>if (room != rm_jumper and room != rm_cartergame){
+    if (instance_number(obj_main_roomtext) &gt; 0){
+        obj_main_roomtext.x = view_xview+view_wview*0.5;
+        obj_main_roomtext.y = 680;
+    }
+}
+
+show_debug_message(string(gameState));
+
+
+if (room == main_room)
 {
     with(obj_main_room_background){
         image_index = 0;
@@ -249,18 +259,15 @@ switch(gameState){
             }
         break;
         case(EnumGameState.S4):
-            if (instance_number(oDialogue)==0){
-                boolHasSeenFirstLetter = true;
-                room_goto(rm_letters);
+            if (room == rm_letters){
+                boolHasSeenFirstLetter = true;                
             }
-            if (boolHasSeenFirstLetter == true and instance_number(oDialogue)==0){
+            if (boolHasSeenFirstLetter == true and room == main_room){
                 boolbird = false;
-                show_debug_message("here");
-                scene_index=4;
+                scene_index++;
                 dialogue(scene_index,0);
                 gameState = EnumGameState.S5;
             }
-        
         break; 
         case(EnumGameState.S5):
             if (room == chat_highscore and instance_number(oDialogue) == 0 and instance_number(obj_main_roomtext) &gt; 0){
@@ -268,7 +275,7 @@ switch(gameState){
                 scene_index++;
                 dialogue(scene_index,0);
                 gameState = EnumGameState.S6;                
-            }        
+            }
         break; 
         case(EnumGameState.S6):
             if (room == main_room and instance_number(oDialogue) ==0){
