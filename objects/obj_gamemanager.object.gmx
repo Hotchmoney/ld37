@@ -104,6 +104,10 @@ score_asteroids = 0;
             image_index=5;
         }
     }
+    
+    if (scene_index == 1 and instance_number(oDialogue) &gt; 0){
+        if (oDialogue.cur == 3) boolmom1 = false;
+    }
 }
 
 if (room == chat_highscore){
@@ -119,8 +123,6 @@ if (room == room_credits){
         room_goto(title_screen);
     }
 }
-
-if (scene_index == 1 and oDialogue.cur == 3) boolmom1 = false;
 </string>
           </argument>
         </arguments>
