@@ -162,14 +162,6 @@ alarm[0] = -1;
             <kind>1</kind>
             <string>if (room == main_room)
 {
-    
-    if (instance_number(oDialogue) &lt;=0){
-        boolmom1 = false;
-        boolmom2 = false;
-        boolbird = false;
-        boolsister = false;
-        boolnurse = false;        
-    }
     with(obj_main_room_background){
         image_index = 0;
         if (obj_gamemanager.boolbird){
@@ -191,6 +183,12 @@ alarm[0] = -1;
     
     if (scene_index == 1 and instance_number(oDialogue) &gt; 0){
         if (oDialogue.cur == 3) boolmom1 = false;
+    }
+}
+
+if (room == rm_intro){
+    if (keyboard_check(vk_escape)){
+        room_goto(main_room);
     }
 }
 
@@ -240,7 +238,7 @@ switch(gameState){
         break;
         case(EnumGameState.S3):
             if (instance_number(oDialogue_2)==0){
-                if ((numPlayed1+numPlayed2+numPlayed3)&gt;1){
+                if ((numPlayed1+numPlayed2+numPlayed3)&gt;0){
                     boolbird = true;
                 }
                 if (room == main_room){
@@ -255,15 +253,17 @@ switch(gameState){
                 boolHasSeenFirstLetter = true;
                 room_goto(rm_letters);
             }
-            if (boolHasSeenFirstLetter and room == main_room){
-                scene_index++;
+            if (boolHasSeenFirstLetter == true and instance_number(oDialogue)==0){
+                boolbird = false;
+                show_debug_message("here");
+                scene_index=4;
                 dialogue(scene_index,0);
                 gameState = EnumGameState.S5;
             }
         
         break; 
         case(EnumGameState.S5):
-            if (room == chat_highscore and instance_number(oDialogue) == 0){
+            if (room == chat_highscore and instance_number(oDialogue) == 0 and instance_number(obj_main_roomtext) &gt; 0){
                 leaderboard_score = 1;
                 scene_index++;
                 dialogue(scene_index,0);
@@ -295,7 +295,7 @@ switch(gameState){
                 obj_letters.image_index = 1;
                 boolHasSeenSecondLetter = true;
             }
-            if (room ==main_room and boolHasSeenSecondLetter){
+            if (room == main_room and boolHasSeenSecondLetter == true){
                 scene_index++;
                 boolsister = true;
                 dialogue(scene_index,0);
