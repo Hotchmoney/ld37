@@ -354,13 +354,17 @@ switch (argument0) { // run through possible scenes
         obj.xx[9] = obj_main_roomtext.x;
         obj.yy[9] = obj_main_roomtext.y;
         
-        obj.msg[10] = "Even though living with this curse is sometimes frustrating and difficult, I think tomorrow will be a much better day.";
+        obj.msg[10] = "Even though living with this curse is sometimes frustrating and difficult.";
         obj.xx[10] = obj_main_roomtext.x;
         obj.yy[10] = obj_main_roomtext.y;
         
-        obj.msg[11] = "THE END";
+        obj.msg[11] = "I think tomorrow will be a much better day.";
         obj.xx[11] = obj_main_roomtext.x;
         obj.yy[11] = obj_main_roomtext.y;
+        
+        obj.msg[12] = "THE END";
+        obj.xx[12] = obj_main_roomtext.x;
+        obj.yy[12] = obj_main_roomtext.y;
         
 
         
