@@ -13,7 +13,7 @@ if (argument1 == 0){
 }
 
 switch (argument0) { // run through possible scenes
-    case (0):
+    case (0): //intro scene
         obj.msg[0] = "Once upon a time, in a far far away land..... (press z to continue)"
         obj.xx[0] = obj_introtext.x; // dialogue position (middle of box/pointer) x
         obj.yy[0] = obj_introtext.y; // dialogue position (bottom of pointer) y
@@ -99,6 +99,130 @@ switch (argument0) { // run through possible scenes
         obj.yy[20] = obj_introtext.y;
         
         break;       
+    case(1): //mom Enters,Briefly
+        obj.msg[0] = "Mom (Talia): Hi dear! I’m just bringing you your dinner, sorry if I’m disturbing you! I had something really funny happen during my evening lecture, so this girl- [PRESS Z TO CONTINUE]";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+        
+        obj.msg[1] = "Ivy: Mom, can’t you see I’m busy? I’m not hungry. [PRESS Z TO CONTINUE]";
+        obj.xx[1] = obj_main_roomtext.x;
+        obj.yy[1] = obj_main_roomtext.y;
+          
+        obj.msg[2] = "Mom (Talia): Honey you need to eat. Remember what the Nurse said? You need your str- [PRESS Z TO CONTINUE]";
+        obj.xx[2] = obj_main_roomtext.x;
+        obj.yy[2] = obj_main_roomtext.y;
+        
+        obj.msg[3] = "Ivy: Mom, please, go away! [PRESS Z TO CONTINUE]";
+        obj.xx[3] = obj_main_roomtext.x;
+        obj.yy[3] = obj_main_roomtext.y;
+        
+        obj.msg[4] = "Thought: I should play a game. Hmm… I wonder if my window ornament has loaded a new one? [PRESS Z TO CONTINUE])";
+        obj.xx[4] = obj_main_roomtext.x;
+        obj.yy[4] = obj_main_roomtext.y;
+        
+        break;
+        
+    case(2): // after first game
+        obj.msg[0] = "Mom (Talia): Okay, sorry, I know you said to leave you alone… but I’m just going to put this dinner here on your bed. ";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+        
+        obj.msg[1] = "Ivy: SERIOUSLY, Mom! Can’t you just leave me alone? ";
+        obj.xx[1] = obj_main_roomtext.x;
+        obj.yy[1] = obj_main_roomtext.y;
+        
+        obj.msg[2] = "Ivy: You can be ANYWHERE in the world right now. ANYWHERE you want. And I’m STUCK here.";
+        obj.xx[2] = obj_main_roomtext.x;
+        obj.yy[2] = obj_main_roomtext.y;
+        
+        obj.msg[3] = "Ivy: I can’t even MAKE you leave. I can’t WALK away when I want some peace and quiet. Don’t you understand how frustrating that is? PLEASE just leave me alone.";
+        obj.xx[3] = obj_main_roomtext.x;
+        obj.yy[3] = obj_main_roomtext.y;
+        
+        obj.msg[4] = "Mom (Talia): Ok dear. I’ll leave you alone. Have fun with your games. I love you so much.";
+        obj.xx[4] = obj_main_roomtext.x;
+        obj.yy[4] = obj_main_roomtext.y;
+        
+        break;
+    case(3):
+        obj.msg[0] = "Oh look, a bird! I wonder what it has for me?[PRESS Z TO CONTINUE]"
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+        
+        break;
+    case(4):
+        obj.msg[0] = "Thought: I should open Internet Hexplorer and check the scoreboard for my games. [PRESS Z TO CONTINUE]";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+        
+        break; 
+    case(5):
+        obj.msg[0] = "Thought: I did so well! Wow, in the online community...nobody knows about my curse. All that matters is my skill, rather than my disability.[PRESS Z TO CONTINUE]";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+        
+        obj.msg[1] = "Thought: I should play a game while I wait for my sister to get back from town… I should try the magic mirror! [PRESS Z TO CONTINUE]";
+        obj.xx[1] = obj_main_roomtext.x;
+        obj.yy[1] = obj_main_roomtext.y;
+        
+        break;
+    case(6):
+        obj.msg[0] = "Thought: Oh, the bird is back. I must have another letter! I should check. [PRESS Z TO CONTINUE]";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+        
+        break;
+    case(7):
+        obj.msg[0] = "Gwennythe:  Hey Ivy, not sure if you got my tweet- we found this super cute top and got it for you.";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+        
+        obj.msg[1] = "Gwennythe: I’m not sure if it will match your uhm… uh.. Well you know, your condition… Can I say that?";
+        obj.xx[1] = obj_main_roomtext.x;
+        obj.yy[1] = obj_main_roomtext.y;
+        
+        obj.msg[2] = "Gwennythe: Is that alright? I don’t want to … y’know.. be insensitive or anything… I don’t, y’know… thats not ALL I see.";
+        obj.xx[2] = obj_main_roomtext.x;
+        obj.yy[2] = obj_main_roomtext.y;
+        
+        obj.msg[3] = "Gwennythe: But you can’t NOT see it, you know? Its like RIGHT THERE.";
+        obj.xx[3] = obj_main_roomtext.x;
+        obj.yy[3] = obj_main_roomtext.y;
+        
+        obj.msg[4] = "Gwennythe: Ugh, sorry, I’m bad at this. Anyway.";
+        obj.xx[4] = obj_main_roomtext.x;
+        obj.yy[4] = obj_main_roomtext.y;
+        
+        obj.msg[5] = ">>places shirt on bed<<";
+        obj.yy[5] = obj_main_roomtext.x;
+        obj.yy[5] = obj_main_roomtext.y;
+        
+        obj.msg[6] = "Gwennythe: Here you go. [PRESS Z TO CONTINUE]";
+        obj.xx[6] = obj_main_roomtext.x;
+        obj.yy[6] = obj_main_roomtext.y;
+        
+        obj.msg[7] = "Ivy: Thanks... [PRESS Z TO CONTINUE]";
+        obj.xx[7] = obj_main_roomtext.x;
+        obj.yy[7] = obj_main_roomtext.y;
+        
+        break;
+    case(8):
+        obj.msg[0] = "Mom (Robin): Hi Ivy. How are things? [PRESS Z TO CONTINUE]";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.x;
+        
+        obj.msg[1] = "Ivy: Hi mom...I’m okay… I guess. The insurance company tweeted at me today. The claim didn’t go through. [PRESS Z TO CONTINUE]";
+        obj.xx[1] = obj_main_roomtext.x;
+        obj.yy[1] = obj_main_roomtext.y;
+        
+        obj.msg[2] = "Mom (Robin): God damnit! This is absurd. I’m going down there to talk to someone immediately. It’s been years. This is completely unacceptable.";
+        obj.xx[2] = obj_main_roomtext.x;
+        obj.yy[2] = obj_main_roomtext.y;
+        
+        obj.msg[3] = "Mom (Robin) : I’m bringing your mother with me, otherwise I might end up killing someone. We will be back later. Stay safe. Cute top, by the way.";
+        obj.xx[3] = obj_main_roomtext.x;
+        obj.yy[3] = obj_main_roomtext.y;
+        
         
         
         // SCENE TEMPLATE

@@ -112,6 +112,7 @@
     <object>objects\obj_main_room_background</object>
     <object>objects\obj_intro</object>
     <object>objects\obj_introtext</object>
+    <object>objects\obj_main_roomtext</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
