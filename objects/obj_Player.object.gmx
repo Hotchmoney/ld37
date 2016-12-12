@@ -127,6 +127,7 @@ if (keyboard_check(vk_escape)){
 draw_set_colour(c_black);
 draw_text(view_xview+10, view_yview+10, "Press esc to go back");
 draw_text(view_xview+10, view_yview+25,"Up/Down/Left/Right arrow key to move");
+draw_text(view_xview+10,view_yview+40,"If you leave, your score will be saved");
 </string>
           </argument>
         </arguments>

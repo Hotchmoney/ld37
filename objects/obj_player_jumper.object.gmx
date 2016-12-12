@@ -28,8 +28,8 @@
             <string>grav = 0.5;
 hsp = 0;
 vsp = 0;
-jumpsp = 20;
-movesp = 4;
+jumpsp = 25;
+movesp = 10;
 image_index = 0;
 image_speed = 0;
 </string>
@@ -61,7 +61,11 @@ key_jump_held = keyboard_check(vk_space);
 
 move = key_right - key_left;
 if (move &lt; 0){
-image_xscale = -1;
+    image_xscale = -1;
+}
+
+if (distance_to_point(obj_platform_jumper.x,obj_platform_jumper.y) &lt;= 0.001){
+    y+=10;
 }
 
 hsp = move * movesp;
@@ -76,7 +80,9 @@ else
 {
     image_index = 1;
 }
-if (vsp &lt; 0) &amp;&amp; (!key_jump_held) vsp = max(vsp,0);
+if ((vsp &lt; 0) &amp;&amp; (!key_jump_held)) {vsp = max(vsp,0);}
+
+if (obj_jumper_manager.lag==true and random_range(0,720) == 0){vsp = max(vsp,0);}
 
 if (place_meeting(x+hsp,y,obj_platform_jumper))
 {
@@ -98,31 +104,7 @@ if (place_meeting(x,y+vsp,obj_platform_jumper))
 }
 y += vsp;
 
-if (place_meeting(x,y,obj_platform_jumper)) y+=10;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_platform_jumper">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>other</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (touched == false) obj_jumper_manager.level++;
-touched = true;
+if (place_meeting(x,y,obj_platform_jumper)) y+=100;
 </string>
           </argument>
         </arguments>
