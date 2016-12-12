@@ -51,7 +51,7 @@ instance_create(416,9824,obj_player_jumper);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (level&gt;=10000){
+            <string>if (level&gt;=100){
     obj_gamemanager.score_jumper = level;
     obj_gamemanager.cur_jumper_level=0;
     room_restart();
