@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//sprite_index = -1;
-xsc = 1;
+            <string>xsc = 1;
 </string>
           </argument>
         </arguments>
@@ -51,9 +50,7 @@ xsc = 1;
             <kind>1</kind>
             <string>if (instance_exists(obj_player_jumper))
 {
-    //if round(obj_player_jumper.y + (obj_player_jumper.sprite_height/2) &gt;y){}
-    //else mask_index = sp_platform_jumper;
-    image_xscale = max(obj_player_jumper.y/10000, 0.1)
+    image_xscale = max(obj_player_jumper.y/10000, 0.01)
 }
 </string>
           </argument>

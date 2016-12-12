@@ -42,6 +42,8 @@ booljustStarted = true;
 boolTwoGames = false;
 boolLevel2 = false;
 boolNewPB = false;
+leaderboard_score = 0;
+scene_index = 0;
 
 score_jumper = 0;
 score_icegame = 0;
@@ -71,7 +73,19 @@ score_asteroids = 0;
             <kind>1</kind>
             <string>if (room == main_room)
 {
-    
+    if(booljustStarted){
+        scene_index++;
+        booljustStarted = false;
+        boolmom1 = true;
+        dialogue(1,0);
+    }
+    if (instance_number(oDialogue) &lt;=0){
+        boolmom1 = false;
+        boolmom2 = false;
+        boolbird = false;
+        boolsister = false;
+        boolnurse = false;        
+    }
     with(obj_main_room_background){
         image_index = 0;
         if (obj_gamemanager.boolbird){
@@ -86,10 +100,13 @@ score_asteroids = 0;
         if (obj_gamemanager.boolsister){
             image_index =4;
         }
-        if (obj_gamemanager.boolnurse)
-        {
+        if (obj_gamemanager.boolnurse){
             image_index=5;
         }
+    }
+    
+    if (scene_index == 1 and instance_number(oDialogue) &gt; 0){
+        if (oDialogue.cur == 3) boolmom1 = false;
     }
 }
 

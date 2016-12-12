@@ -64,10 +64,6 @@ if (move &lt; 0){
     image_xscale = -1;
 }
 
-if (distance_to_point(obj_platform_jumper.x,obj_platform_jumper.y) &lt;= 0.001){
-    y+=10;
-}
-
 hsp = move * movesp;
 if (vsp &lt; 10) vsp += grav;
 
@@ -104,7 +100,8 @@ if (place_meeting(x,y+vsp,obj_platform_jumper))
 }
 y += vsp;
 
-if (place_meeting(x,y,obj_platform_jumper)) y+=100;
+if (place_meeting(x+1,y-1,obj_platform_jumper)) y+=100;
+if (place_meeting(x-1,y-1,obj_platform_jumper)) y+=100;
 </string>
           </argument>
         </arguments>

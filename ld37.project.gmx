@@ -44,6 +44,7 @@
     <sprites name="intro">
       <sprite>sprites\spr_intro</sprite>
     </sprites>
+    <sprite>sprites\spr_letter</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="textbox">
@@ -52,6 +53,7 @@
     <background>background\bg_title</background>
     <background>background\bg_computer</background>
     <background>background\bg_credits</background>
+    <background>background\bg_letterbg</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -109,12 +111,13 @@
       <object>objects\obj_credit</object>
       <object>objects\obj_computerwarp</object>
     </objects>
-    <object>objects\obj_selectedbar</object>
     <object>objects\obj_gamemanager</object>
     <object>objects\obj_main_room_background</object>
     <object>objects\obj_intro</object>
     <object>objects\obj_introtext</object>
     <object>objects\obj_main_roomtext</object>
+    <object>objects\obj_letters</object>
+    <object>objects\obj_selectedbar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
@@ -131,6 +134,7 @@
     <room>rooms\chat_highscore</room>
     <room>rooms\room_credits</room>
     <room>rooms\rm_intro</room>
+    <room>rooms\rm_letters</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

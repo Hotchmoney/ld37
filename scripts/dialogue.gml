@@ -122,7 +122,7 @@ switch (argument0) { // run through possible scenes
         
         break;
         
-    case(2): // after first game
+    case(2): //during first game
         obj.msg[0] = "Mom (Talia): Okay, sorry, I know you said to leave you alone… but I’m just going to put this dinner here on your bed. ";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
@@ -354,13 +354,17 @@ switch (argument0) { // run through possible scenes
         obj.xx[9] = obj_main_roomtext.x;
         obj.yy[9] = obj_main_roomtext.y;
         
-        obj.msg[10] = "Even though living with this curse is sometimes frustrating and difficult, I think tomorrow will be a much better day.";
+        obj.msg[10] = "Even though living with this curse is sometimes frustrating and difficult.";
         obj.xx[10] = obj_main_roomtext.x;
         obj.yy[10] = obj_main_roomtext.y;
         
-        obj.msg[11] = "THE END";
+        obj.msg[11] = "I think tomorrow will be a much better day.";
         obj.xx[11] = obj_main_roomtext.x;
         obj.yy[11] = obj_main_roomtext.y;
+        
+        obj.msg[12] = "THE END";
+        obj.xx[12] = obj_main_roomtext.x;
+        obj.yy[12] = obj_main_roomtext.y;
         
 
         
