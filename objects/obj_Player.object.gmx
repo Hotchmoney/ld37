@@ -140,7 +140,7 @@ if (keyboard_check(vk_escape)){
 }
 
 draw_self();
-
+draw_set_halign(fa_left);
 draw_set_colour(c_black);
 draw_text(view_xview+10, view_yview+10, "Press esc to go back");
 draw_text(view_xview+10, view_yview+25,"Up/Down/Left/Right arrow key to move");
