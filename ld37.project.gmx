@@ -106,7 +106,6 @@
     <object>objects\obj_gamemanager</object>
     <object>objects\obj_main_room_background</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
     <rooms name="jumper">
