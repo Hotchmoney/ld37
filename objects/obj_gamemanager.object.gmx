@@ -76,7 +76,13 @@ score_asteroids = 0;
         booljustStarted = false;
         boolmom1 = true;
         dialogue(1,0);
-        if(instance_number(oDialogue) == 0) boolmom1 = false;
+    }
+    if (instance_number(oDialogue) &lt;=0){
+        boolmom1 = false;
+        boolmom2 = false;
+        boolbird = false;
+        boolsister = false;
+        boolnurse = false;        
     }
     with(obj_main_room_background){
         image_index = 0;
