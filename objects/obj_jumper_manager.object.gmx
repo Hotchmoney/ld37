@@ -57,14 +57,20 @@ instance_create(416,9824,obj_player_jumper);
     room_restart();
 }
 
+if (level &lt; -4){
+    obj_gamemanager.cur_jumper_level=0;
+    room_restart();
+}
+
 level = round((9900-obj_player_jumper.y)/100);
-show_debug_message(level);
 
 if (keyboard_check(vk_escape)){
     if (obj_gamemanager.score_jumper &lt; level) obj_gamemanager.score_jumper = level;
     obj_gamemanager.cur_jumper_level = 0;
     room_goto(main_room);
 }
+
+if (obj_gamemanager.score_jumper &lt; level and obj_player_jumper.vsp == 0) obj_gamemanager.score_jumper = level;
 </string>
           </argument>
         </arguments>
