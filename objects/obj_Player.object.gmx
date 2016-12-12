@@ -29,7 +29,8 @@
 target_x = x;
 target_y = y;
 moving = false;
-numMoves = 0;
+par = 117; //optimal moves + 50
+gameScore = par;
 
 image_speed = 0;
 </string>
@@ -54,17 +55,19 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Handle Player Movement
+            <string>//Move the player
+var spee = 4;
+if (obj_gamemanager.lag) {
+    spee = 2;
+}
 
-//Move the player
-if ( target_x &gt; x ) { x += 8 } //right
-if ( target_x &lt; x ) { x -= 8 } //left
-if ( target_y &gt; y ) { y += 8 } //down
-if ( target_y &lt; y ) { y -= 8 } //up
+if ( target_x &gt; x ) { x += spee } //right
+if ( target_x &lt; x ) { x -= spee } //left
+if ( target_y &gt; y ) { y += spee } //down
+if ( target_y &lt; y ) { y -= spee } //up
 
 //Check for destination
 if ( target_x == x &amp;&amp; target_y == y) {
-    numMoves++;
     moving = false;
     image_speed = 0;
 }
@@ -99,7 +102,6 @@ if (keyboard_check(vk_escape)){
     obj_gamemanager.cur_asteroid_level = 0;
     room_goto(main_room);
 }
-
 </string>
           </argument>
         </arguments>
@@ -122,7 +124,16 @@ if (keyboard_check(vk_escape)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>if (y &lt;= -9*32) { //in ballerina head
+    sprite_index = spr_Player_Down;
+    if (gameScore &gt; obj_gamemanager.score_icegame) {
+        obj_gamemanager.score_icegame = gameScore;
+    }
+    
+    draw_text(view_xview+264, view_yview+168, "You Win!");
+}
+
+draw_self();
 
 draw_set_colour(c_black);
 draw_text(view_xview+10, view_yview+10, "Press esc to go back");

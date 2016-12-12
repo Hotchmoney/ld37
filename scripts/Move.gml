@@ -25,5 +25,7 @@ if (!moving) {
         image_speed = 0.3;
     }
     
+    gameScore--;
+    show_debug_message(gameScore);
     moving = true;
 }
