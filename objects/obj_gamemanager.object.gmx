@@ -43,6 +43,7 @@ boolTwoGames = false;
 boolLevel2 = false;
 boolNewPB = false;
 leaderboard_score = 0;
+scene_index = 0;
 
 score_jumper = 0;
 score_icegame = 0;
