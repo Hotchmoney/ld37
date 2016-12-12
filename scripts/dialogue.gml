@@ -254,7 +254,117 @@ switch (argument0) { // run through possible scenes
         obj.msg[0] = "Thought: I should check the score boards to see if I beat that jerkwad 9chanter. [PRESS Z TO CONTINUE]";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
+        
+        break;
+    case(13):
+        obj.msg[0] = "Thought (while reading score boards): Yes! Haha! Stone legs can’t stop me kicking your ass, pal!";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+        
+        break;
+    case(14):
+        obj.msg[0] = "Nurse(Medie): Ivy? How are you doing up here? I just ran into your mother on the street.";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+        
+        obj.msg[1] = "Ivy: Oh! Hi Nurse! I’m doing great!";
+        obj.xx[1] = obj_main_roomtext.x;
+        obj.yy[1] = obj_main_roomtext.y;
+        
+        obj.msg[2] = "Nurse: Did you lose track of time again? How have you been feeling?";
+        obj.xx[2] = obj_main_roomtext.x;
+        obj.yy[2] = obj_main_roomtext.y;
+        
+        obj.msg[3] = "Ivy: Well… I was a little stiff earlier, but I’m feeling fine now! ";
+        obj.xx[3] = obj_main_roomtext.x;
+        obj.yy[3] = obj_main_roomtext.y;
+        
+        obj.msg[4] = "Ivy: Yeah… I mean, sometimes…";
+        obj.xx[4] = obj_main_roomtext.x;
+        obj.yy[4] = obj_main_roomtext.y;
+        
+        obj.msg[5] = "Nurse: It is very important to keep up with that, or the curse will eventually start spreading again. How have you been feeling apart from that?";
+        obj.xx[5] = obj_main_roomtext.x;
+        obj.yy[5] = obj_main_roomtext.y;
+        
+        obj.msg[6] = "Ivy: Honestly, I’ve found that playing online has really helped. I don’t feel as, y’know, trapped all the time. I can play just like anyone else, and I don’t have to think about my legs.";
+        obj.xx[6] = obj_main_roomtext.x;
+        obj.yy[6] = obj_main_roomtext.y;
+        
+        obj.msg[7] = "Nurse: Oh, I don’t know dearie. Don’t video games make you violent?";
+        obj.xx[7] = obj_main_roomtext.x;
+        obj.yy[7] = obj_main_roomtext.y;
+        
+        obj.msg[8] = "Ivy: NO NURSE THAT IS A WIDELY DEBUNKED STEREOTYPE";
+        obj.xx[8] = obj_main_roomtext.x;
+        obj.yy[8] = obj_main_roomtext.y;
+        
+        obj.msg[9] = "Nurse: Oh uh… well as long as they make you feel better…";
+        obj.xx[9] = obj_main_roomtext.x;
+        obj.yy[9] = obj_main_roomtext.y;
+        
+        obj.msg[10] = "Ivy: It does! It just lets me feel like I’m in control of my life again!";
+        obj.xx[10] = obj_main_roomtext.x;
+        obj.yy[10] = obj_main_roomtext.y;
+        
+        obj.msg[11] = "Nurse: Thats so nice dear. I’ll be back tomorrow to check on you. Take care!";
+        obj.xx[11] = obj_main_roomtext.x;
+        obj.yy[11] = obj_main_roomtext.y;
+        
+        break;
 
+    case(15):
+        obj.msg[0] = "I’ve learned a lot today about myself and my illness.";
+        obj.xx[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
+        
+        obj.msg[1] = "Although sometimes I might be frustrated, like earlier with Mother Talia, I should try not to snap at the people who love me.";
+        obj.xx[1] = obj_main_roomtext.x;
+        obj.yy[1] = obj_main_roomtext.y;
+        
+        obj.msg[2] = "They’re trying their best to be there for me.";
+        obj.xx[2] = obj_main_roomtext.x;
+        obj.yy[2] = obj_main_roomtext.y;
+        
+        obj.msg[3]= "While my sister might not understand my disability, or how to talk to me about it- she is trying her best to keep me included in her life, like tweeting at me and buying me that adorable top.";
+        obj.xx[3] = obj_main_roomtext.x;
+        obj.yy[3] = obj_main_roomtext.y;
+        
+        obj.msg[4] = "It might be several more years before I’m approved for repayment from the insurance company, but I have people fighting by my side and sticking up for me—like my moms, Robin and Talia.";
+        obj.xx[4] = obj_main_roomtext.x;
+        obj.yy[4] = obj_main_roomtext.y;
+        
+        obj.msg[5] = "While video games are important, and help me escape from my curse—it’s important to keep up with my treatments, so that I have less stiffness and can enjoy my life as much as possible.";
+        obj.xx[5] = obj_main_roomtext.x;
+        obj.yy[5] = obj_main_roomtext.y;
+        
+        obj.msg[6] = "When Mother Talia returns, I should apologize for snapping at her.";
+        obj.xx[6] = obj_main_roomtext.x;
+        obj.yy[6] = obj_main_roomtext.y;
+        
+        obj.msg[7] = "I should help Gwynetthe understand how to talk about my disability.";
+        obj.xx[7] = obj_main_roomtext.x;
+        obj.yy[7] = obj_main_roomtext.y;
+        
+        obj.msg[8] = "I should thank moms Talia and Robin for their patience and discipline in raising me.";
+        obj.xx[8] = obj_main_roomtext.x;
+        obj.yy[8] = obj_main_roomtext.y;
+        
+        obj.msg[9] = "Maybe I can make a small gift as a token of appreciation for Nurse Medie, and her constant care.";
+        obj.xx[9] = obj_main_roomtext.x;
+        obj.yy[9] = obj_main_roomtext.y;
+        
+        obj.msg[10] = "Even though living with this curse is sometimes frustrating and difficult.";
+        obj.xx[10] = obj_main_roomtext.x;
+        obj.yy[10] = obj_main_roomtext.y;
+        
+        obj.msg[11] = "I think tomorrow will be a much better day.";
+        obj.xx[11] = obj_main_roomtext.x;
+        obj.yy[11] = obj_main_roomtext.y;
+        
+        obj.msg[12] = "THE END";
+        obj.xx[12] = obj_main_roomtext.x;
+        obj.yy[12] = obj_main_roomtext.y;
         
 
         

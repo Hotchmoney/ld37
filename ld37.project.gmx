@@ -21,9 +21,9 @@
       <sprite>sprites\spr_Player_Up</sprite>
       <sprite>sprites\spr_Player_Left</sprite>
       <sprite>sprites\spr_grass</sprite>
-      <sprite>sprites\spr_ground</sprite>
       <sprite>sprites\spr_ice</sprite>
       <sprite>sprites\spr_rock</sprite>
+      <sprite>sprites\spr_ground</sprite>
     </sprites>
     <sprites name="textbox">
       <sprite>sprites\sShadow</sprite>
@@ -58,8 +58,9 @@
     <script>scripts\Move.gml</script>
     <scripts name="textbox">
       <script>scripts\dialogue.gml</script>
+      <script>scripts\dialogue_scoreboard.gml</script>
+      <script>scripts\boxHeight.gml</script>
     </scripts>
-    <script>scripts\script2.gml</script>
   </scripts>
   <shaders name="shaders">
     <shaders name="LensManipulation">
@@ -84,12 +85,13 @@
       <object>objects\obj_Player</object>
       <object>objects\obj_ice</object>
       <object>objects\obj_rock</object>
-      <object>objects\obj_carterGround</object>
+      <object>objects\obj_ground</object>
     </objects>
     <objects name="textbox">
       <object>objects\oDialogue</object>
       <object>objects\oDialogue_2</object>
-      <object>objects\obj_jumper_manager</object>
+      <object>objects\oDialogue_scoreboard</object>
+      <object>objects\oControl</object>
     </objects>
     <objects name="jumper">
       <object>objects\obj_platform_jumper</object>
