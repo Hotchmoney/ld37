@@ -26,6 +26,5 @@ if (!moving) {
     }
     
     gameScore--;
-    show_debug_message(gameScore);
     moving = true;
 }

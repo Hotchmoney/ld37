@@ -39,7 +39,7 @@
  */
 
 msg_id = 0; // see dialogue() script for which conversation to choose
-dialogue(msg_id); // call the dialogue
+dialogue(msg_id,0); // call the dialogue
 </string>
           </argument>
         </arguments>

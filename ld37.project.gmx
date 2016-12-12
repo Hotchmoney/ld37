@@ -41,6 +41,9 @@
     <sprites name="backgrounds for main room">
       <sprite>sprites\sp_main_room</sprite>
     </sprites>
+    <sprites name="intro">
+      <sprite>sprites\spr_intro</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="textbox">
@@ -86,7 +89,9 @@
     </objects>
     <objects name="textbox">
       <object>objects\oDialogue</object>
+      <object>objects\oDialogue_2</object>
       <object>objects\oDialogue_scoreboard</object>
+      <object>objects\oControl</object>
     </objects>
     <objects name="jumper">
       <object>objects\obj_platform_jumper</object>
@@ -107,6 +112,9 @@
     <object>objects\obj_selectedbar</object>
     <object>objects\obj_gamemanager</object>
     <object>objects\obj_main_room_background</object>
+    <object>objects\obj_intro</object>
+    <object>objects\obj_introtext</object>
+    <object>objects\obj_main_roomtext</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
@@ -122,6 +130,7 @@
     <room>rooms\main_room</room>
     <room>rooms\chat_highscore</room>
     <room>rooms\room_credits</room>
+    <room>rooms\rm_intro</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

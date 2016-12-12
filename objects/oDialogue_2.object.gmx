@@ -32,7 +32,7 @@ phase = 0;   // finish sentence/to-next
 time = 0;
 
 // customization variables
-key = (ord("k"));
+key = (ord("z"));
 padding = 16;           // text padding
 max_width = 640;        // max width of text box
 inside_col = c_white;   // inside color of box

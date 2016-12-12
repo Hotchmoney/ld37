@@ -86,7 +86,7 @@ created = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(main_room);
+            <string>room_goto(rm_intro);
 </string>
           </argument>
         </arguments>

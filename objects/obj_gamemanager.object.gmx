@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>score_asteroids = 0;
+            <string>
 lag = false;
 prev_score_asteroids = 0;
 cur_jumper_level=0;
-score_jumper = 0;
-score_icegame = 0;
+
+
 better_asteroids = false;
 
 boolmom1 = false;
@@ -38,7 +38,15 @@ boolmom2 = false;
 boolbird = false;
 boolsister = false;
 boolnurse = false;
+booljustStarted = true;
+boolTwoGames = false;
+boolLevel2 = false;
+boolNewPB = false;
 
+score_jumper = 0;
+score_icegame = 0;
+level_icegame = 0;
+score_asteroids = 0;
 </string>
           </argument>
         </arguments>

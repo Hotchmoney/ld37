@@ -94,6 +94,7 @@ if (obj_gamemanager.score_jumper &lt; level and obj_player_jumper.vsp == 0) obj_
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_white);
+draw_set_halign(fa_left);
 draw_text(700,view_yview+10,"Press Escape to go back");
 draw_text(700,view_yview+25,"Left/Right to move");
 draw_text(700,view_yview+40,"Space to jump");

@@ -31,7 +31,7 @@ target_y = y;
 moving = false;
 par = 117; //optimal moves + 50
 gameScore = par;
-
+levelScore = 1;
 image_speed = 0;
 </string>
           </argument>
@@ -88,6 +88,7 @@ if(x &lt; view_xview) { // to the left
     view_xview[0] -= view_wview;
 }
 if(x &gt; view_xview + view_wview) { // to the right
+    levelScore++;
     view_xview[0] += view_wview;
 }
 if (y &lt; view_yview) { // top
@@ -99,7 +100,12 @@ if(y &gt; view_yview + view_hview) { // bottom
 
 // esc
 if (keyboard_check(vk_escape)){
-    obj_gamemanager.cur_asteroid_level = 0;
+    if (levelScore &gt; obj_gamemanager.level_icegame){
+        obj_gamemanager.level_icegame = levelScore;
+        if (gameScore &gt; obj_gamemanager.level_icegame){
+            obj_gamemanager.level_icegame = gameScore;
+        }
+    }
     room_goto(main_room);
 }
 </string>
@@ -134,11 +140,12 @@ if (keyboard_check(vk_escape)){
 }
 
 draw_self();
-
+draw_set_halign(fa_left);
 draw_set_colour(c_black);
 draw_text(view_xview+10, view_yview+10, "Press esc to go back");
 draw_text(view_xview+10, view_yview+25,"Up/Down/Left/Right arrow key to move");
 draw_text(view_xview+10,view_yview+40,"If you leave, your score will be saved");
+draw_text(view_xview+10,view_yview+55,"Par : "+string(gameScore));
 </string>
           </argument>
         </arguments>
