@@ -48,6 +48,7 @@
     </backgrounds>
     <background>background\bg_title</background>
     <background>background\bg_computer</background>
+    <background>background\bg_credits</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -80,7 +81,7 @@
       <object>objects\obj_Player</object>
       <object>objects\obj_ice</object>
       <object>objects\obj_rock</object>
-      <object>objects\spr_carterGround</object>
+      <object>objects\obj_carterGround</object>
     </objects>
     <objects name="textbox">
       <object>objects\oDialogue</object>
@@ -90,9 +91,6 @@
       <object>objects\obj_jumper_manager</object>
       <object>objects\obj_player_jumper</object>
     </objects>
-    <object>objects\obj_selectedbar</object>
-    <object>objects\obj_gamemanager</object>
-    <object>objects\obj_main_room_background</object>
     <objects name="particles">
       <object>objects\obj_sparkles</object>
     </objects>
@@ -104,6 +102,9 @@
       <object>objects\obj_credit</object>
       <object>objects\obj_computerwarp</object>
     </objects>
+    <object>objects\obj_selectedbar</object>
+    <object>objects\obj_gamemanager</object>
+    <object>objects\obj_main_room_background</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
