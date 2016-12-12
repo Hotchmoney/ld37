@@ -29,7 +29,7 @@
 hsp = 0;
 vsp = 0;
 jumpsp = 25;
-movesp = 4;
+movesp = 10;
 image_index = 0;
 image_speed = 0;
 </string>
