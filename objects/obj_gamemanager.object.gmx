@@ -73,6 +73,7 @@ score_asteroids = 0;
             <string>if (room == main_room)
 {
     if(booljustStarted){
+        scene_index++;
         booljustStarted = false;
         boolmom1 = true;
         dialogue(1,0);
@@ -117,6 +118,8 @@ if (room == room_credits){
         room_goto(title_screen);
     }
 }
+
+if (scene_index == 1 and oDialogue.cur == 3) boolmom1 = false;
 </string>
           </argument>
         </arguments>
