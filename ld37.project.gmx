@@ -81,7 +81,7 @@
       <object>objects\obj_Player</object>
       <object>objects\obj_ice</object>
       <object>objects\obj_rock</object>
-      <object>objects\spr_carterGround</object>
+      <object>objects\obj_carterGround</object>
     </objects>
     <objects name="textbox">
       <object>objects\oDialogue</object>

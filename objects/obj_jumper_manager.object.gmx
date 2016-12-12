@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>gamestate = 0;
-level = 0;
+level = 9824-9824;
 lag = obj_gamemanager.lag;
 instance_create(416,9824,obj_player_jumper);
 </string>
@@ -51,11 +51,14 @@ instance_create(416,9824,obj_player_jumper);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (level&gt;=100){
+            <string>if (level&gt;=10000){
     obj_gamemanager.score_jumper = level;
     obj_gamemanager.cur_jumper_level=0;
     room_restart();
 }
+
+level = round((9900-obj_player_jumper.y)/100);
+show_debug_message(level);
 
 if (keyboard_check(vk_escape)){
     if (obj_gamemanager.score_jumper &lt; level) obj_gamemanager.score_jumper = level;
@@ -85,9 +88,12 @@ if (keyboard_check(vk_escape)){
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_white);
-draw_text(750,view_yview+10,"Press Escape to go back");
-draw_text(750,view_yview+25,"Left/Right to move");
-draw_text(750,view_yview+40,"Space to jump");
+draw_text(700,view_yview+10,"Press Escape to go back");
+draw_text(700,view_yview+25,"Left/Right to move");
+draw_text(700,view_yview+40,"Space to jump");
+draw_text(10,view_yview+40,"If you leave, your score will be saved");
+draw_text(10,view_yview+10,"Level : "+string(level));
+draw_text(10,view_yview+25,"Personal Best: "+string(obj_gamemanager.score_jumper));
 </string>
           </argument>
         </arguments>
