@@ -113,7 +113,6 @@
     <object>objects\obj_intro</object>
     <object>objects\obj_introtext</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
     <rooms name="jumper">
