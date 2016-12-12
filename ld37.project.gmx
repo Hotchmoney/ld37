@@ -93,11 +93,11 @@
       <object>objects\oDialogue</object>
       <object>objects\oDialogue_2</object>
       <object>objects\oDialogue_scoreboard</object>
-      <object>objects\oControl</object>
+      <object>objects\obj_platform_jumper</object>
     </objects>
     <objects name="jumper">
       <object>objects\obj_platform_jumper</object>
-      <object>objects\obj_jumper_manager</object>
+      <object>objects\obj_player_jumper</object>
       <object>objects\obj_player_jumper</object>
     </objects>
     <objects name="particles">
