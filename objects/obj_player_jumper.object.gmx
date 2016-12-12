@@ -28,7 +28,7 @@
             <string>grav = 0.5;
 hsp = 0;
 vsp = 0;
-jumpsp = 20;
+jumpsp = 15;
 movesp = 4;
 image_index = 0;
 image_speed = 0;
@@ -76,11 +76,9 @@ else
 {
     image_index = 1;
 }
-if ((vsp &lt; 0) &amp;&amp; (!key_jump_held)) vsp = max(vsp,0);
+if ((vsp &lt; 0) &amp;&amp; (!key_jump_held)) {vsp = max(vsp,0);}
 
-if (obj_jumper_manager.lag==true and random_range(0,720) == 0){
-    vsp = max(vsp,0);
-}
+if (obj_jumper_manager.lag==true and random_range(0,720) == 0){vsp = max(vsp,0);}
 
 if (place_meeting(x+hsp,y,obj_platform_jumper))
 {
@@ -102,7 +100,7 @@ if (place_meeting(x,y+vsp,obj_platform_jumper))
 }
 y += vsp;
 
-if (place_meeting(x,y,obj_platform_jumper)) y+=10;
+if (place_meeting(x,y,obj_platform_jumper)) y+=100;
 </string>
           </argument>
         </arguments>
