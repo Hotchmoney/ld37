@@ -48,6 +48,7 @@
     </backgrounds>
     <background>background\bg_title</background>
     <background>background\bg_computer</background>
+    <background>background\bg_credits</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
