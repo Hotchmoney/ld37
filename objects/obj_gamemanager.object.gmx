@@ -42,6 +42,7 @@ booljustStarted = true;
 boolTwoGames = false;
 boolLevel2 = false;
 boolNewPB = false;
+leaderboard_score = 0;
 
 score_jumper = 0;
 score_icegame = 0;
@@ -75,7 +76,7 @@ score_asteroids = 0;
         booljustStarted = false;
         boolmom1 = true;
         dialogue(1,0);
-        boolmom1 = false;
+        if(instance_number(oDialogue) == 0) boolmom1 = false;
     }
     with(obj_main_room_background){
         image_index = 0;
