@@ -30,6 +30,8 @@ lag = false;
 prev_score_asteroids = 0;
 cur_jumper_level=0;
 
+noEscape = false;
+
 prevBest1 = 0;
 prevBest2 = 0;
 
@@ -170,6 +172,13 @@ alarm[0] = -1;
     }
 }
 
+if (alarm_get(0) !=-1 or alarm_get(1) !=1){
+    noEscape = true;
+}
+
+if (alarm_get(0) == -1 and alarm_get(1) ==-1){
+    noEscape = false;
+}
 
 if (room == main_room)
 {
@@ -405,7 +414,7 @@ switch(gameState){
         case(EnumGameState.S18):
             if (instance_number(oDialogue) == 0)
             {
-                room_goto(room_credits);
+                game_end();
             }
         break;
 }

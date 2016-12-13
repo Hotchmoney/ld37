@@ -109,7 +109,7 @@ if(y &gt; view_yview + view_hview) { // bottom
 }
 
 // esc
-if (keyboard_check(vk_escape) and instance_number(oDialogue) == 0 and instance_number(oDialogue_2)==0){
+if (keyboard_check(vk_escape) and instance_number(oDialogue) == 0 and instance_number(oDialogue_2)==0 and !obj_gamemanager.noEscape){
     if (levelScore &gt; obj_gamemanager.level_icegame){
         obj_gamemanager.level_icegame = levelScore;
         if (gameScore &gt; obj_gamemanager.level_icegame){
