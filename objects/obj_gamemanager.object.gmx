@@ -352,8 +352,8 @@ switch(gameState){
         break; 
         case(EnumGameState.S13):
             leaderboard_score = 1;
-            prevBest1 = score_jumper - 2;
-            prevBest2 = score_asteroids;
+            prevBest1 = score_jumper+1;
+            prevBest2 = score_asteroids+0.5;
             lag = false;
             if (instance_number(oDialogue) == 0 and room == chat_highscore)
             {
