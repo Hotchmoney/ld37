@@ -67,7 +67,11 @@ if (level &lt; -4){
     room_restart();
 }
 
-obj_main_roomtext.y = view_yview+view_hview*0.5+672;
+obj_main_roomtext.y = obj_player_jumper.y - 32;
+
+if (instance_number(oDialogue) &gt; 0){
+    oDialogue.yy[oDialogue.cur] = obj_player_jumper.y-32;
+}
 
 level = round((9900-obj_player_jumper.y)/100);
 

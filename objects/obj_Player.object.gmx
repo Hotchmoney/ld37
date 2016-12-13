@@ -77,6 +77,11 @@ if ( target_x == x &amp;&amp; target_y == y) {
     image_speed = 0;
 }
 
+if (instance_number(oDialogue)&gt;0){
+    oDialogue.xx[oDialogue.cur] = view_xview+view_wview*0.5;
+    oDialogue.yy[oDialogue.cur] = view_yview+view_hview*0.5;
+}
+
 //Handle input
 if (keyboard_check(vk_left)) {
     Move('x', -1, spr_Player_Left);

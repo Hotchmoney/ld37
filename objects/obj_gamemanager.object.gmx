@@ -347,7 +347,7 @@ switch(gameState){
         
         break; 
         case(EnumGameState.S13):
-            leaderboard_score = 2;
+            leaderboard_score = 1;
             lag = false;
             if (instance_number(oDialogue) == 0 and room == chat_highscore)
             {
@@ -363,6 +363,7 @@ switch(gameState){
                 } 
             }
             if (room == main_room and boolLevel3Success){
+                leaderboard_score = 3;
                 scene_index++;
                 dialogue(scene_index,0);
                 gameState = EnumGameState.S15;
@@ -370,7 +371,6 @@ switch(gameState){
         
         break; 
         case(EnumGameState.S15):
-            leaderboard_score = 3;
             if (room == chat_highscore and instance_number(oDialogue)==0){
                 scene_index++;
                 dialogue(scene_index,0);
