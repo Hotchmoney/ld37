@@ -78,24 +78,18 @@ switch (obj_gamemanager.leaderboard_score) { // run through possible scenes
         break;
         
     case(3):
-        obj1.msg[0] = "FemmePirouette";
-        obj2.msg[0] = "CockGoblin";
-        obj3.msg[0] = "[EVL]WitchWench99";
-        obj4.msg[0] = "Falak";
-        obj5.msg[0] = "Karatorian";
-            
-        obj6.msg[0] = "AssDragon: Lol thia game is dum af";
-        obj7.msg[0] = "xxX2xHalflingXxx: GG";
-        obj8.msg[0] = "Dadislutprincess1: @AssDragon clearly you are too if you’re playing it";
-        obj9.msg[0] = "xxX2xHalflingXxx: kek";
-        obj10.msg[0] = "Nymphlyfe: How do you move?";
-        obj11.msg[0] = "Nymphlyfe: How do you move your avatar in Geostones?";
-        obj12.msg[0] = "Dadislutprincess1: @Nymphlyfe What do you mean?";
-        obj13.msg[0] = "Dadislutprincess1: @Nymphlyfe arrow keys";
-        obj14.msg[0] = "xxX2xHalflingXxx: arrow keys";
-        obj15.msg[0] = "AssDragon: lol what a noon";
-        obj16.msg[0] = "Nymphlyfe: What? Magic Mirrors don’t have arrow keys";
-        obj17.msg[0] = "Dadislutprincess1: OOOooooOOOooOOOooohh my god why are you like this";
+        obj1.msg[0] = "1. FemmePirouette";
+        obj2.msg[0] = "2. CockGoblin";
+        obj3.msg[0] = "3. [EVL]WitchWench99";
+        obj4.msg[0] = "4. Falak";
+        obj5.msg[0] = "5. Karatorian";
+        
+        obj6.msg[0] = "xxXHuntsMaster69Xxx: GG";
+        obj7.msg[0] = "xxXHuntsMaster69Xxx: Anyone else notice the omage to DC2?";
+        obj8.msg[0] = "HotchMoneyLuvin: Oh yeah! That game was gr8";
+        obj9.msg[0] = "SongBird2014: dumb fucking bitch suck ass fuck";
+        obj10.msg[0] = "HotchMoneyLuvin: Wo dude chill out";
+        obj11.msg[0] = "xxXHuntsMaster69Xxx: Mods pls ban"
         break;
 }
 

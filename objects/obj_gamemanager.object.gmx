@@ -30,6 +30,9 @@ lag = false;
 prev_score_asteroids = 0;
 cur_jumper_level=0;
 
+prevBest1 = 0;
+prevBest2 = 0;
+
 better_asteroids = false;
 
 
@@ -260,7 +263,7 @@ switch(gameState){
             if (room == rm_letters){
                 boolHasSeenFirstLetter = true;                
             }
-            if (boolHasSeenFirstLetter == true and room == main_room){
+            if (boolHasSeenFirstLetter == true and room == main_room and instance_number(oDialogue) == 0){
                 boolbird = false;
                 scene_index++;
                 dialogue(scene_index,0);
@@ -276,15 +279,18 @@ switch(gameState){
             }
             break; 
         case(EnumGameState.S6):
-            if (room == main_room and instance_number(oDialogue) == 0){
+            if (room == main_room and instance_number(oDialogue) == 0 and instance_number(obj_main_roomtext) &gt; 0){
                 scene_index++;
                 dialogue(scene_index,0);
+                if (instance_number(oDialogue)&gt;0){
+                    oDialogue.cur+=1;
+                }
                 gameState = EnumGameState.S7;
             }
         break; 
         case(EnumGameState.S7):
             if ((numPlayed1 + numPlayed2 + numPlayed3) &gt; 2 and instance_number(oDialogue)==0){
-                if (score_jumper &gt; 60 or score_asteroids &gt; 14 or level_icegame &gt; 2){
+                if (score_jumper &gt; 60 or score_asteroids &gt; 14){
                     if (room == main_room){
                         boolbird = true;
                         scene_index++;
@@ -328,10 +334,8 @@ switch(gameState){
         
         break; 
         case(EnumGameState.S11):
-            if (room == rm_jumper or room == rm_cartergame or room == rm_asteroids){
-                lag = true;
-            }
-            if (lag == true and instance_number(oDialogue) == 0)
+            lag = true;
+            if (lag == true and instance_number(oDialogue) == 0 and room!=main_room and room!=chat_highscore)
             {
                 if(alarm_get(1) == -1){
                     alarm[1] = room_speed*5;
@@ -348,6 +352,8 @@ switch(gameState){
         break; 
         case(EnumGameState.S13):
             leaderboard_score = 1;
+            prevBest1 = score_jumper - 2;
+            prevBest2 = score_asteroids;
             lag = false;
             if (instance_number(oDialogue) == 0 and room == chat_highscore)
             {
@@ -358,7 +364,7 @@ switch(gameState){
         break;     
         case(EnumGameState.S14):
             if (instance_number(oDialogue)==0){
-                if (score_jumper &gt; 80 or score_asteroids &gt; 20 or level_icegame &gt; 3){
+                if (score_jumper &gt; prevBest1 or score_asteroids &gt; prevBest2){
                     boolLevel3Success = true;
                 } 
             }

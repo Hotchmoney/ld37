@@ -1,0 +1,30 @@
+;Auto-generated Diamond Directive File. Can be deleted without harm.
+.Set CabinetNameTemplate=C:\Users\Hamada\Documents\GameMaker\Projects\ld37.gmx\objects\~takenforgranite.CAB
+.Set CompressionType=LZX
+.Set CompressionLevel=7
+.Set InfFileName=C:\Users\Hamada\Documents\GameMaker\Projects\ld37.gmx\objects\~takenforgranite_LAYOUT.INF
+.Set RptFileName=C:\Users\Hamada\Documents\GameMaker\Projects\ld37.gmx\objects\~takenforgranite.RPT
+.Set MaxDiskSize=CDROM
+.Set ReservePerCabinetSize=0
+.Set InfCabinetLineFormat=*cab#*=Application Source Media,*cabfile*,0
+.Set Compress=on
+.Set CompressionMemory=21
+.Set DiskDirectoryTemplate=
+.Set Cabinet=ON
+.Set MaxCabinetSize=999999999
+.Set InfDiskHeader=
+.Set InfDiskLineFormat=
+.Set InfCabinetHeader=[SourceDisksNames]
+.Set InfFileHeader=
+.Set InfFileHeader1=[SourceDisksFiles]
+.Set InfFileLineFormat=*file*=*cab#*,,*size*,*csum*
+"C:\Users\Hamada\AppData\Local\gm_ttt_24810\gm_ttt_92946\D3DX9_43.dll"
+"C:\Users\Hamada\AppData\Local\gm_ttt_24810\gm_ttt_92946\data.win"
+"C:\Users\Hamada\AppData\Local\gm_ttt_24810\gm_ttt_92946\ld37.exe"
+"C:\Users\Hamada\AppData\Local\gm_ttt_24810\gm_ttt_92946\options.ini"
+"C:\Users\Hamada\AppData\Local\gm_ttt_24810\gm_ttt_92946\snd_bedroomMusic.ogg"
+"C:\Users\Hamada\AppData\Local\gm_ttt_24810\gm_ttt_92946\snd_carterGame.ogg"
+"C:\Users\Hamada\AppData\Local\gm_ttt_24810\gm_ttt_92946\snd_hamadaGame.ogg"
+"C:\Users\Hamada\AppData\Local\gm_ttt_24810\gm_ttt_92946\snd_hotchkissGame.ogg"
+"C:\Users\Hamada\AppData\Local\gm_ttt_24810\gm_ttt_92946\snd_hoverSparkle.ogg"
+"C:\Users\Hamada\AppData\Local\gm_ttt_24810\gm_ttt_92946\snd_titleScreen.ogg"
