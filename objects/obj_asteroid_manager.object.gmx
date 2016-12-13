@@ -30,6 +30,7 @@ level = 0;
 asteroid_counter = 0;
 asteroid_time = 0;
 lag = obj_gamemanager.lag;
+obj_gamemanager.boolHasPlayedGame2 = true;
 instance_create(view_xview+view_wview*0.5, view_yview + view_hview*0.5,obj_player_asteroid);
 
 audio_stop_sound(snd_bedroomMusic);
@@ -63,6 +64,9 @@ if (!audio_is_playing(snd_hamadaGame)) {
  var b = (round(asteroid_time));
  if ( b mod 7 == 0 and asteroid_counter &lt;((4*level)+6*2))
  {
+    with(obj_asteroids_asteroid){
+        speed+=1;
+    }
     level+=1;
     asteroid_time+=0.5;
     if (asteroid_time &gt; obj_gamemanager.score_asteroids){
@@ -100,7 +104,7 @@ if (asteroid_time mod 15 == 0){
 
 
 
-if (keyboard_check(vk_escape)){
+if (keyboard_check(vk_escape) and instance_number(oDialogue) == 0 and instance_number(oDialogue_2)==0){
     obj_gamemanager.betterasteroids = false;
     if (obj_gamemanager.score_asteroids &lt; asteroid_time){
         obj_gamemanager.betterasteroids = true;

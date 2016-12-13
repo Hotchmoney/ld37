@@ -32,6 +32,7 @@ moving = false;
 par = 117; //optimal moves + 50
 gameScore = par;
 levelScore = 1;
+obj_gamemanager.boolHasPlayedGame3 = true;
 image_speed = 0;
 
 audio_stop_sound(snd_bedroomMusic);
@@ -103,7 +104,7 @@ if(y &gt; view_yview + view_hview) { // bottom
 }
 
 // esc
-if (keyboard_check(vk_escape)){
+if (keyboard_check(vk_escape) and instance_number(oDialogue) == 0 and instance_number(oDialogue_2)==0){
     if (levelScore &gt; obj_gamemanager.level_icegame){
         obj_gamemanager.level_icegame = levelScore;
         if (gameScore &gt; obj_gamemanager.level_icegame){

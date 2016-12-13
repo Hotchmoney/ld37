@@ -86,14 +86,17 @@ hov = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>created = false;
-if (hov!=0){
-    with (hov){
-        instance_destroy();
+            <string>if (instance_number(oDialogue) ==0 and instance_number(oDialogue_2) == 0){
+    created = false;
+    if (hov!=0){
+        with (hov){
+            instance_destroy();
+        }
+        hov = 0;
     }
-    hov = 0;
+    obj_gamemanager.numPlayed3+=1;
+    room_goto(rm_cartergame);
 }
-room_goto(rm_cartergame);
 </string>
           </argument>
         </arguments>

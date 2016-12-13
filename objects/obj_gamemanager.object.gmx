@@ -30,8 +30,20 @@ lag = false;
 prev_score_asteroids = 0;
 cur_jumper_level=0;
 
-
 better_asteroids = false;
+
+
+boolHasPlayedGame1 = false;
+boolHasPlayedGame2 = false;
+boolHasPlayedGame3 = false;
+numPlayed1=0;
+numPlayed2=0;
+numPlayed3=0;
+boolHasSeenFirstLetter = false;
+boolHasSeenSecondLetter = false;
+boolLevel3Success = false;
+
+
 
 boolmom1 = false;
 boolmom2 = false;
@@ -49,6 +61,83 @@ score_jumper = 0;
 score_icegame = 0;
 level_icegame = 0;
 score_asteroids = 0;
+
+gameState = EnumGameState.S1
+
+enum EnumGameState {
+
+    S1,
+    S2,
+    S3,
+    S4,
+    S5,
+    S6,
+    S7,
+    S8,
+    S9,
+    S10,
+    S11,
+    S12,
+    S13,
+    S14,
+    S15,
+    S16,
+    S17,
+    S18
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scene_index++;
+dialogue(scene_index,0);
+gameState = EnumGameState.S12;
+alarm[1] = -1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scene_index++;
+dialogue(scene_index,0);
+gameState=EnumGameState.S3;
+alarm[0] = -1;
 </string>
           </argument>
         </arguments>
@@ -71,33 +160,16 @@ score_asteroids = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (room == main_room)
+            <string>if (room != rm_jumper and room != rm_cartergame){
+    if (instance_number(obj_main_roomtext) &gt; 0){
+        obj_main_roomtext.x = view_xview+view_wview*0.5;
+        obj_main_roomtext.y = 680;
+    }
+}
+
+
+if (room == main_room)
 {
-    if(booljustStarted){
-        scene_index++;
-        booljustStarted = false;
-        boolmom1 = true;
-        dialogue(1,0);
-    }
-    if(boolLevel2){
-        //scene_index++;
-        booljustStarted = false;
-        boolmom1 = true;
-        dialogue(1,0);
-    }
-    if(boolNewPB){
-        //scene_index++;
-        booljustStarted = false;
-        boolmom1 = true;
-        dialogue(1,0);
-    }
-    if (instance_number(oDialogue) &lt;=0){
-        boolmom1 = false;
-        boolmom2 = false;
-        boolbird = false;
-        boolsister = false;
-        boolnurse = false;        
-    }
     with(obj_main_room_background){
         image_index = 0;
         if (obj_gamemanager.boolbird){
@@ -110,10 +182,10 @@ score_asteroids = 0;
             image_index=3;
         }
         if (obj_gamemanager.boolsister){
-            image_index =4;
+            image_index =5;
         }
         if (obj_gamemanager.boolnurse){
-            image_index=5;
+            image_index=4;
         }
     }
     
@@ -122,22 +194,216 @@ score_asteroids = 0;
     }
 }
 
-if (room == rm_jumper or room == rm_cartergame or room == rm_asteroids){
-    
+if (room == rm_intro){
+    if (keyboard_check(vk_escape)){
+        room_goto(main_room);
+    }
 }
 
-if (room == chat_highscore){
+
+if (room == chat_highscore and instance_number(oDialogue) == 0 and instance_number(oDialogue_2)==0){
     if (keyboard_check(vk_escape))
     {
         room_goto(main_room);
     }
 }
 
-if (room == room_credits){
+if (room == room_credits and instance_number(oDialogue) == 0 and instance_number(oDialogue_2)==0){
     if(keyboard_check(vk_escape))
     {
         room_goto(title_screen);
     }
+}
+
+if (room == rm_letters and instance_number(oDialogue) == 0 and instance_number(oDialogue_2)==0)
+{
+    if (keyboard_check(vk_escape))
+    {
+        room_goto(main_room);
+    }    
+}
+
+switch(gameState){
+        case(EnumGameState.S1):
+            if (room == main_room){
+                boolmom1 = true;
+                if (instance_number(oDialogue) ==0){
+                    scene_index++;
+                    dialogue(scene_index,0);
+                    gameState = EnumGameState.S2;
+                }
+            }
+        break;
+        case(EnumGameState.S2):
+            if (instance_number(oDialogue) ==0){
+                boolmom1 = false;
+                if (boolHasPlayedGame1 or boolHasPlayedGame2 or boolHasPlayedGame3){
+                    if (alarm_get(0) == -1){
+                        alarm[0] = room_speed*5;
+                    }
+                }
+            }
+        break;
+        case(EnumGameState.S3):
+            if (instance_number(oDialogue_2)==0){
+                if ((numPlayed1+numPlayed2+numPlayed3)&gt;0){
+                    boolbird = true;
+                }
+                if (room == main_room){
+                    scene_index++;
+                    dialogue(scene_index,0);
+                    gameState = EnumGameState.S4;                    
+                }
+            }
+        break;
+        case(EnumGameState.S4):
+            if (room == rm_letters){
+                boolHasSeenFirstLetter = true;                
+            }
+            if (boolHasSeenFirstLetter == true and room == main_room){
+                boolbird = false;
+                scene_index++;
+                dialogue(scene_index,0);
+                gameState = EnumGameState.S5;
+            }
+        break; 
+        case(EnumGameState.S5):
+            if (room == chat_highscore and instance_number(oDialogue) == 0 and instance_number(obj_main_roomtext) &gt; 0){
+                leaderboard_score = 1;
+                scene_index++;
+                dialogue(scene_index,0);
+                gameState = EnumGameState.S6;                
+            }
+        break; 
+        case(EnumGameState.S6):
+            if (room == main_room and instance_number(oDialogue) == 0){
+                scene_index++;
+                show_debug_message("Here");
+                dialogue(scene_index,0);
+                gameState = EnumGameState.S7;
+            }
+        break; 
+        case(EnumGameState.S7):
+            if ((numPlayed1 + numPlayed2 + numPlayed3) &gt; 2){
+                if (score_jumper &gt; 60 or score_asteroids &gt; 14 or level_icegame &gt; 2){
+                    if (room == main_room){
+                        boolbird = true;
+                        scene_index++;
+                        dialogue(scene_index,0);
+                        gameState = EnumGameState.S8;
+                    }
+                }
+            }
+        
+        break; 
+        case(EnumGameState.S8):
+            if (room == rm_letters and instance_number(obj_letters) &gt; 0){
+                obj_letters.image_index = 1;
+                boolHasSeenSecondLetter = true;
+            }
+            if (room == main_room and boolHasSeenSecondLetter == true){
+                scene_index++;
+                boolbird = false;
+                boolsister = true;
+                dialogue(scene_index,0);
+                gameState = EnumGameState.S9;
+            }
+        
+        break; 
+        case(EnumGameState.S9):
+            if (room == main_room and instance_number(oDialogue) ==0){
+                scene_index++;
+                boolsister = false;
+                boolmom2 = true;
+                dialogue(scene_index,0);
+                gameState = EnumGameState.S10;
+            }
+        
+        break; 
+        case(EnumGameState.S10):
+            if(room == main_room and instance_number(oDialogue) == 0){
+                scene_index++;
+                boolmom2 = false;
+                dialogue(scene_index,0);
+                
+                gameState = EnumGameState.S11;                
+            }
+        
+        break; 
+        case(EnumGameState.S11):
+            if (room == rm_jumper or room == rm_cartergame or room == rm_asteroids){
+                lag = true;
+            }
+            if (lag == true and instance_number(oDialogue) == 0)
+            {
+                if(alarm_get(1) == -1){
+                    alarm[1] = room_speed*5;
+                }
+            }
+        break; 
+        case(EnumGameState.S12):
+            if (room == main_room and instance_number(oDialogue_2) == 0){
+                scene_index++;
+                dialogue(scene_index,0);
+                gameState = EnumGameState.S13;
+            }
+        
+        break; 
+        case(EnumGameState.S13):
+            leaderboard_score = 2;
+            if (instance_number(oDialogue) == 0 and room == chat_highscore)
+            {
+                scene_index++;
+                dialogue(scene_index,0);
+                gameState = EnumGameState.S14;
+            }        
+        break;     
+        case(EnumGameState.S14):
+            if (room != main_room and room != chat_highscore and instance_number(oDialogue)==0){
+                if (score_jumper &gt; 90 or score_asteroids &gt; 22 or level_icegame &gt; 3){
+                    boolLevel3Success = true;
+                } 
+            }
+            if (room == main_room and boolLevel3Success){
+                scene_index++;
+                dialogue(scene_index,0);
+                gameState = EnumGameState.S15;
+            }
+        
+        break; 
+        case(EnumGameState.S15):
+            leaderboard_score = 3;
+            if (room == chat_highScore and instance_number(oDialogue)==0){
+                scene_index++;
+                dialogue(scene_index,0);
+                gameState = EnumGameState.S16; 
+            }
+        
+        break; 
+        case(EnumGameState.S16):
+            boolnurse = true;
+            if (room == main_room and instance_number(oDialogue) == 0){
+                scene_index++;
+                dialogue(scene_index,0);
+                gameState = EnumGameState.S17;
+            }
+            
+        
+        break;
+        case(EnumGameState.S17):
+            if (room == main_room and instance_number(oDialogue) ==0){
+                boolnurse = false;
+                scene_index++;
+                dialogue(scene_index,0);
+                gameState = EnumGameState.S18;
+            }
+        break;
+        case(EnumGameState.S18):
+            if (instance_number(oDialogue) == 0)
+            {
+                room_goto(room_credits);
+            }
+        break;
 }
 </string>
           </argument>

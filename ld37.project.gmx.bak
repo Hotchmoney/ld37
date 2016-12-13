@@ -8,7 +8,17 @@
     <extension index="0">extensions\Smooth Dialogue Engine</extension>
     <extension index="1">extensions\Simple Fullscreen Shaders</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_titleScreen</sound>
+    <sound>sound\snd_bedroomMusic</sound>
+    <sound>sound\snd_carterGame</sound>
+    <sound>sound\snd_hamadaGame</sound>
+    <sound>sound\snd_hotchkissGame</sound>
+    <sound>sound\snd_hoverSparkle</sound>
+    <sound>sound\snd_jump</sound>
+    <sound>sound\snd_lazer</sound>
+    <sound>sound\snd_selection</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="asteroids">
       <sprite>sprites\sp_bullet_asteroid</sprite>
@@ -44,6 +54,7 @@
     <sprites name="intro">
       <sprite>sprites\spr_intro</sprite>
     </sprites>
+    <sprite>sprites\spr_letter</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="textbox">
@@ -52,6 +63,7 @@
     <background>background\bg_title</background>
     <background>background\bg_computer</background>
     <background>background\bg_credits</background>
+    <background>background\bg_letterbg</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -89,17 +101,22 @@
     </objects>
     <objects name="textbox">
       <object>objects\oDialogue</object>
-<<<<<<< HEAD
-      <object>objects\oDialogue_scoreboard</object>
-=======
       <object>objects\oDialogue_2</object>
+      <object>objects\oDialogue_scoreboard</object>
+<<<<<<< HEAD
+    </objects>
+    <objects name="jumper">
+      <object>objects\obj_platform_jumper</object>
+      <object>objects\obj_player_jumper</object>
+      <object>objects\obj_jumper_manager</object>
+=======
       <object>objects\oControl</object>
->>>>>>> da0dc7300ea86130832e6377395ff0875b62fe61
     </objects>
     <objects name="jumper">
       <object>objects\obj_platform_jumper</object>
       <object>objects\obj_jumper_manager</object>
       <object>objects\obj_player_jumper</object>
+>>>>>>> 4f398152fda192dcf2eeb17e23e32fb30b165d29
     </objects>
     <objects name="particles">
       <object>objects\obj_sparkles</object>
@@ -111,13 +128,15 @@
       <object>objects\obj_startBox</object>
       <object>objects\obj_credit</object>
       <object>objects\obj_computerwarp</object>
+      <object>objects\obj_letterWarp</object>
     </objects>
-    <object>objects\obj_selectedbar</object>
     <object>objects\obj_gamemanager</object>
     <object>objects\obj_main_room_background</object>
     <object>objects\obj_intro</object>
     <object>objects\obj_introtext</object>
     <object>objects\obj_main_roomtext</object>
+    <object>objects\obj_letters</object>
+    <object>objects\obj_selectedbar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_screen</room>
@@ -134,6 +153,7 @@
     <room>rooms\chat_highscore</room>
     <room>rooms\room_credits</room>
     <room>rooms\rm_intro</room>
+    <room>rooms\rm_letters</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

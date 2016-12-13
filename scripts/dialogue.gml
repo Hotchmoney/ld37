@@ -161,18 +161,20 @@ switch (argument0) { // run through possible scenes
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
         
+    case(6):
+        
         obj.msg[1] = "Thought: I should play a game while I wait for my sister to get back from town… I should try the magic mirror! [PRESS Z TO CONTINUE]";
         obj.xx[1] = obj_main_roomtext.x;
         obj.yy[1] = obj_main_roomtext.y;
         
         break;
-    case(6):
+    case(7):
         obj.msg[0] = "Thought: Oh, the bird is back. I must have another letter! I should check. [PRESS Z TO CONTINUE]";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
         
         break;
-    case(7):
+    case(8):
         obj.msg[0] = "Gwennythe:  Hey Ivy, not sure if you got my tweet- we found this super cute top and got it for you.";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
@@ -193,8 +195,8 @@ switch (argument0) { // run through possible scenes
         obj.xx[4] = obj_main_roomtext.x;
         obj.yy[4] = obj_main_roomtext.y;
         
-        obj.msg[5] = ">>places shirt on bed<<";
-        obj.yy[5] = obj_main_roomtext.x;
+        obj.msg[5] = "Gwennythe places shirt on bed.";
+        obj.xx[5] = obj_main_roomtext.x;
         obj.yy[5] = obj_main_roomtext.y;
         
         obj.msg[6] = "Gwennythe: Here you go. [PRESS Z TO CONTINUE]";
@@ -206,7 +208,7 @@ switch (argument0) { // run through possible scenes
         obj.yy[7] = obj_main_roomtext.y;
         
         break;
-    case(8):
+    case(9):
         obj.msg[0] = "Mom (Robin): Hi Ivy. How are things? [PRESS Z TO CONTINUE]";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.x;
@@ -223,12 +225,14 @@ switch (argument0) { // run through possible scenes
         obj.xx[3] = obj_main_roomtext.x;
         obj.yy[3] = obj_main_roomtext.y;
         
+    case(10):
+        
         obj.msg[4] = "Thought: This stupid insurance company hasn’t done anything but piss me off. Maybe trying out my Crystal Ball will take my mind off it.";
         obj.xx[4] = obj_main_roomtext.x;
         obj.yy[4] = obj_main_roomtext.y;
     
         break;
-    case(9):
+    case(11):
         obj.msg[0] = "Thought: Hmmmm....";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
@@ -238,31 +242,31 @@ switch (argument0) { // run through possible scenes
         obj.yy[1] = obj_main_roomtext.y;
         
         break;
-    case(10):
+    case(12):
         obj.msg[0] = "Thought: Wow, that made playing a lot harder. I hope it doesn’t affect my ranking on the scoreboard. [PRESS Z TO CONTINUE]";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
    
         break; 
-    case(11):
+    case(13):
         obj.msg[0] = "Thought: Wow, what a JERK! I bet he uses 9chant or something. How did he beat my score! I’ll show him.  There’s no way I’d play HOTS like some kind of peasant! [PRESS Z TO CONTINUE]";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
         
         break;
-    case(12):
+    case(14):
         obj.msg[0] = "Thought: I should check the score boards to see if I beat that jerkwad 9chanter. [PRESS Z TO CONTINUE]";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
         
         break;
-    case(13):
+    case(15):
         obj.msg[0] = "Thought (while reading score boards): Yes! Haha! Stone legs can’t stop me kicking your ass, pal!";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
         
         break;
-    case(14):
+    case(16):
         obj.msg[0] = "Nurse(Medie): Ivy? How are you doing up here? I just ran into your mother on the street.";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
@@ -313,7 +317,7 @@ switch (argument0) { // run through possible scenes
         
         break;
 
-    case(15):
+    case(17):
         obj.msg[0] = "I’ve learned a lot today about myself and my illness.";
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
