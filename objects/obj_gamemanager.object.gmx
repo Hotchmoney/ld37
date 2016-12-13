@@ -281,7 +281,7 @@ switch(gameState){
             break; 
         case(EnumGameState.S5):
             if (room == chat_highscore and instance_number(oDialogue) == 0 and instance_number(obj_main_roomtext) &gt; 0){
-                leaderboard_score = 1;
+                leaderboard_score = 0;
                 scene_index++;
                 dialogue(scene_index,0);
                 gameState = EnumGameState.S6;                
@@ -348,6 +348,7 @@ switch(gameState){
             {
                 if(alarm_get(1) == -1){
                     alarm[1] = room_speed*5;
+                    leaderboard_score = 1;
                 }
             }
         break; 

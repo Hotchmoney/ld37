@@ -1,4 +1,4 @@
-﻿///dialogue(scene,dialoguetype);
+///dialogue(scene,dialoguetype);
 /**
  * Dialogue
  * Call this script whenever you would like a dialogue box to appear,
