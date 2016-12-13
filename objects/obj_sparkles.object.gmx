@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sparks = part_system_create();
+            <string>audio_play_sound(snd_hoverSparkle, 0, true);
+
+sparks = part_system_create();
 part_system_depth(sparks,-60);
 
 spark_part = part_type_create();
@@ -61,7 +63,9 @@ part_emitter_stream(sparks,spark_emitter,spark_part,50);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>part_system_destroy(sparks);
+            <string>audio_stop_sound(snd_hoverSparkle);
+
+part_system_destroy(sparks);
 </string>
           </argument>
         </arguments>
