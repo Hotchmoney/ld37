@@ -70,20 +70,7 @@ alpha = 0;              // transparency -- changes with phase
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//set colour based on person talking
-
-if (string_count("Talia",msg[cur]) &gt;0){
-    inside_col = $DEFAFB;
-}
-if (string_count("Robin",msg[cur]) &gt; 0){
-    inside_col = $FF919B;
-}
-if (string_count("Gwynetthe",msg[cur]) &gt; 0){
-    inside_col = $FBE2FF;
-}
-if (string_count("Thinking",msg[cur]) &gt; 0){
-    inside_col = $DADEFF;
-}
+            <string>
 
 // check whether the box is close to its destination with a leeway of 4 pixels both hor and vert
 positioned = (x &gt; (xx[cur] - 2) &amp;&amp; x &lt; (xx[cur] + 2) &amp;&amp; y &gt; ((yy[cur] - padding * 2) - 2) &amp;&amp; y &lt; ((yy[cur] - padding * 2) + 2));

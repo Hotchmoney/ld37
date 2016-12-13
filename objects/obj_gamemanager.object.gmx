@@ -167,8 +167,6 @@ alarm[0] = -1;
     }
 }
 
-show_debug_message(string(gameState));
-
 
 if (room == main_room)
 {
@@ -184,10 +182,10 @@ if (room == main_room)
             image_index=3;
         }
         if (obj_gamemanager.boolsister){
-            image_index =4;
+            image_index =5;
         }
         if (obj_gamemanager.boolnurse){
-            image_index=5;
+            image_index=4;
         }
     }
     
@@ -278,8 +276,9 @@ switch(gameState){
             }
         break; 
         case(EnumGameState.S6):
-            if (room == main_room and instance_number(oDialogue) ==0){
+            if (room == main_room and instance_number(oDialogue) == 0){
                 scene_index++;
+                show_debug_message("Here");
                 dialogue(scene_index,0);
                 gameState = EnumGameState.S7;
             }
@@ -288,6 +287,7 @@ switch(gameState){
             if ((numPlayed1 + numPlayed2 + numPlayed3) &gt; 2){
                 if (score_jumper &gt; 60 or score_asteroids &gt; 14 or level_icegame &gt; 2){
                     if (room == main_room){
+                        boolbird = true;
                         scene_index++;
                         dialogue(scene_index,0);
                         gameState = EnumGameState.S8;
@@ -297,13 +297,13 @@ switch(gameState){
         
         break; 
         case(EnumGameState.S8):
-            if(room == main_room and instance_number(oDialogue) == 0){
-                room_goto(rm_letters);
+            if (room == rm_letters and instance_number(obj_letters) &gt; 0){
                 obj_letters.image_index = 1;
                 boolHasSeenSecondLetter = true;
             }
             if (room == main_room and boolHasSeenSecondLetter == true){
                 scene_index++;
+                boolbird = false;
                 boolsister = true;
                 dialogue(scene_index,0);
                 gameState = EnumGameState.S9;
@@ -323,17 +323,21 @@ switch(gameState){
         case(EnumGameState.S10):
             if(room == main_room and instance_number(oDialogue) == 0){
                 scene_index++;
+                boolmom2 = false;
                 dialogue(scene_index,0);
-                gameState = EnumGameState.S11;
-                lag = true;
+                
+                gameState = EnumGameState.S11;                
             }
         
         break; 
         case(EnumGameState.S11):
-            if (room != main_room and room != chat_highscore and instance_number(oDialogue) == 0)
+            if (room == rm_jumper or room == rm_cartergame or room == rm_asteroids){
+                lag = true;
+            }
+            if (lag == true and instance_number(oDialogue) == 0)
             {
                 if(alarm_get(1) == -1){
-                    alarm[1] = room_speed*3;
+                    alarm[1] = room_speed*5;
                 }
             }
         break; 
