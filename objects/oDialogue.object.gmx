@@ -128,7 +128,7 @@ if (text &lt; string_length(msg[cur])) {
 if (keyboard_check_pressed(key)) {
     if (text != string_length(msg[cur])) {
         text = string_length(msg[cur]);
-    } else {
+    } else {        
         phase = 1;
     }
 }
@@ -140,7 +140,7 @@ if (text == string_length(msg[cur]) &amp;&amp; keyboard_check_pressed(key) &amp;
         text = 0;
         phase = 0;
     } else {
-        fade = 1; // fade out
+       fade = 1; // fade out
     }
 }
 

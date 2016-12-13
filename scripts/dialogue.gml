@@ -161,6 +161,8 @@ switch (argument0) { // run through possible scenes
         obj.xx[0] = obj_main_roomtext.x;
         obj.yy[0] = obj_main_roomtext.y;
         
+        break;
+        
     case(6):
         
         obj.msg[1] = "Thought: I should play a game while I wait for my sister to get back from town… I should try the magic mirror! [PRESS Z TO CONTINUE]";
@@ -211,7 +213,7 @@ switch (argument0) { // run through possible scenes
     case(9):
         obj.msg[0] = "Mom (Robin): Hi Ivy. How are things? [PRESS Z TO CONTINUE]";
         obj.xx[0] = obj_main_roomtext.x;
-        obj.yy[0] = obj_main_roomtext.x;
+        obj.yy[0] = obj_main_roomtext.y;
         
         obj.msg[1] = "Ivy: Hi mom...I’m okay… I guess. The insurance company tweeted at me today. The claim didn’t go through. [PRESS Z TO CONTINUE]";
         obj.xx[1] = obj_main_roomtext.x;
@@ -225,6 +227,7 @@ switch (argument0) { // run through possible scenes
         obj.xx[3] = obj_main_roomtext.x;
         obj.yy[3] = obj_main_roomtext.y;
         
+        break;        
     case(10):
         
         obj.msg[4] = "Thought: This stupid insurance company hasn’t done anything but piss me off. Maybe trying out my Crystal Ball will take my mind off it.";
@@ -370,7 +373,7 @@ switch (argument0) { // run through possible scenes
         obj.xx[12] = obj_main_roomtext.x;
         obj.yy[12] = obj_main_roomtext.y;
         
-
+        break;
         
         // SCENE TEMPLATE
         /*case(numb): // ensure numb is not used in cases above

@@ -27,7 +27,7 @@ var obj15 = instance_create(obj14.x, obj14.y, oDialogue_scoreboard);
 var obj16 = instance_create(obj15.x, obj15.y, oDialogue_scoreboard);
 var obj17 = instance_create(obj16.x, obj16.y, oDialogue_scoreboard);
 
-switch (argument0) { // run through possible scenes
+switch (obj_gamemanager.leaderboard_score) { // run through possible scenes
 
 
 
